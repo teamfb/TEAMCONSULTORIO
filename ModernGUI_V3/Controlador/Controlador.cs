@@ -56,7 +56,7 @@ namespace ModernGUI_V3.Controlador
         {
             string error = "";
 
-            DataRow dr = bd.Leer1Registro("SELECT * FROM usuarios WHERE cuenta = '" + _usu + "';", ref error);
+            DataRow dr = bd.Leer1Registro("SELECT * FROM usuarios WHERE usuario = '" + _usu + "';", ref error);
             if (error.Contains("Unable to connect"))
             {
                 MessageBox.Show("Error al conectar con el servidor de la base de datos");
@@ -100,13 +100,13 @@ namespace ModernGUI_V3.Controlador
 
         public DataSet listarUsuariosCtl()
         {
-            iSql = "SELECT nombres, apellidos, cuenta, estado FROM usuarios ORDER BY nombres ASC";
+            iSql = "SELECT usuario, nombres, apellidos,  tipo FROM usuarios ORDER BY nombres ASC";
             return (bd.LeerRegistros(iSql));
         }
 
         public DataSet listarUsuarios2Ctl(string _dato_a_buscar)
         {
-            iSql = "SELECT  nombres, apellidos, cuenta, estado FROM usuarios WHERE nombres LIKE ('" + _dato_a_buscar + "%') ORDER BY nombres ASC";
+            iSql = "SELECT usuario, nombres, apellidos,  tipo FROM usuarios WHERE nombres LIKE ('" + _dato_a_buscar + "%') ORDER BY nombres ASC";
             return (bd.LeerRegistros(iSql));
         }
         public bool agregarUsuarioCtl(object[] _datos, ref string _error)

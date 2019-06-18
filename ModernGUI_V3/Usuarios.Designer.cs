@@ -48,7 +48,8 @@
             this.ComboTipo = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAgregar2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -114,7 +115,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(402, 97);
+            this.label3.Location = new System.Drawing.Point(407, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 17);
             this.label3.TabIndex = 13;
@@ -211,11 +212,12 @@
             // 
             // txtBusqueda
             // 
-            this.txtBusqueda.Location = new System.Drawing.Point(424, 288);
+            this.txtBusqueda.Location = new System.Drawing.Point(424, 290);
             this.txtBusqueda.Margin = new System.Windows.Forms.Padding(2);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(279, 20);
             this.txtBusqueda.TabIndex = 36;
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // ComboTipo
             // 
@@ -227,6 +229,7 @@
             this.ComboTipo.Name = "ComboTipo";
             this.ComboTipo.Size = new System.Drawing.Size(121, 21);
             this.ComboTipo.TabIndex = 37;
+            this.ComboTipo.SelectedIndexChanged += new System.EventHandler(this.ComboTipo_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -242,7 +245,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(985, 187);
+            this.button2.Location = new System.Drawing.Point(983, 185);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(69, 24);
@@ -250,16 +253,29 @@
             this.button2.Text = "Editar";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnAgregar2
             // 
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(896, 185);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(69, 24);
-            this.button3.TabIndex = 58;
-            this.button3.Text = "Agregar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAgregar2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar2.Location = new System.Drawing.Point(896, 185);
+            this.btnAgregar2.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregar2.Name = "btnAgregar2";
+            this.btnAgregar2.Size = new System.Drawing.Size(69, 24);
+            this.btnAgregar2.TabIndex = 58;
+            this.btnAgregar2.Text = "Agregar";
+            this.btnAgregar2.UseVisualStyleBackColor = true;
+            this.btnAgregar2.Click += new System.EventHandler(this.btnAgregar2_Click);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(983, 242);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(69, 24);
+            this.button4.TabIndex = 61;
+            this.button4.Text = "Cerrar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Usuarios
             // 
@@ -267,9 +283,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1126, 551);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnAgregar2);
             this.Controls.Add(this.ComboTipo);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.btnEliminar);
@@ -291,6 +308,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Usuarios";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Usuarios_Load);
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridUsuarios)).EndInit();
@@ -321,6 +339,7 @@
         private System.Windows.Forms.ComboBox ComboTipo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAgregar2;
+        private System.Windows.Forms.Button button4;
     }
 }

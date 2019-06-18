@@ -16,7 +16,7 @@ namespace ModernGUI_V3.Controlador
         }
         public static bool LetrasNumeros(string _cad)
         {   //Regex regex = new Regex(@"^[^ ][a-zA-Z ]+[^ ]$");
-            Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$");
+            Regex regex = new Regex(@"^[0-9a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$");
             return regex.IsMatch(_cad);
         }
 

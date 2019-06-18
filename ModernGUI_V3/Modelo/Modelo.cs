@@ -365,7 +365,7 @@ namespace ModernGUI_V3.Modelo
             string iSql = "INSERT INTO " + _tbl + " VALUES (";
 
             if (_datos[0] is string)
-                iSql = iSql + "'" + _datos[0].ToString().ToUpper() + "'";
+                iSql = iSql + "'" + _datos[0].ToString() + "'";
             else if (_datos[0] is DateTime)
                 iSql = iSql + fechayhoraMySQL((DateTime)_datos[0]);
             else
@@ -374,7 +374,7 @@ namespace ModernGUI_V3.Modelo
             for (int x = 1; x < _datos.Length; x++)
             {
                 if (_datos[x] is string)
-                    iSql = iSql + ", '" + _datos[x].ToString().ToUpper() + "'";
+                    iSql = iSql + ", '" + _datos[x].ToString() + "'";
                 else if (_datos[x] is DateTime)
                     iSql = iSql + ", " + fechayhoraMySQL((DateTime)_datos[x]);
                 else

@@ -68,7 +68,9 @@ namespace ModernGUI_V3
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            Login o = new Login();
+            o.Show();
         }
         //Capturar posicion y tamaño antes de maximizar para restaurar
         int lx, ly;

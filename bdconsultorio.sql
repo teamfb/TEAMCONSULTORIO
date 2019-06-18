@@ -17,15 +17,19 @@ USE `consultorio`;
 
 -- Volcando estructura para tabla consultorio.usuarios
 CREATE TABLE IF NOT EXISTS `usuarios` (
-  `cuenta` varchar(50) NOT NULL,
+  `usuario` varchar(50) NOT NULL,
   `nombres` varchar(300) NOT NULL,
   `apellidos` varchar(300) NOT NULL,
   `clave` varchar(128) NOT NULL,
-  `estado` varchar(50) NOT NULL,
-  PRIMARY KEY (`cuenta`)
+  `tipo` varchar(50) NOT NULL,
+  PRIMARY KEY (`usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- La exportación de datos fue deseleccionada.
+-- Volcando datos para la tabla consultorio.usuarios: ~1 rows (aproximadamente)
+/*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+INSERT INTO `usuarios` (`usuario`, `nombres`, `apellidos`, `clave`, `tipo`) VALUES
+	('fede', 'federico', 'castillo Valenzuela', '202cb962ac59075b964b07152d234b70', 'Administrador');
+/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
