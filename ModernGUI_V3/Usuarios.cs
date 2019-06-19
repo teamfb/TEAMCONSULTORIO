@@ -22,8 +22,8 @@ namespace ModernGUI_V3
 
         private DataSet ds;
         private controladorUsuarios obj = new controladorUsuarios(Login.config);
-        private string cuenta;
-        private string estado;
+        private string usuario;
+   
 
         private void BarraTitulo_MouseMove(object sender, MouseEventArgs e)
         {
@@ -35,6 +35,7 @@ namespace ModernGUI_V3
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -95,12 +96,7 @@ namespace ModernGUI_V3
                 txtApellido.Focus();
                 return;
             }
-            if (Validaciones.LetrasNumeros(txtUsuario.Text) == false)
-            {
-                MessageBox.Show("Solo se permiten letras y numeros en el campo 'Nombre de usuario'.");
-                txtApellido.Focus();
-                return;
-            }
+           
 
             object[] datosA = { txtUsuario.Text.Trim(), txtNombre.Text.Trim(), txtApellido.Text.Trim(),  txtContraseña.Text.Trim(), ComboTipo.Text.Trim() };
 
@@ -135,6 +131,97 @@ namespace ModernGUI_V3
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
             listarUsuarios();
+        }
+        private void limpiarCampos()
+        {
+            txtUsuario.Text = "";
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            txtContraseña.Text = "";
+            ComboTipo.Text = "";
+        }
+          
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (txtApellido.Text.Trim() == ""  || txtNombre.Text.Trim() == "" || txtUsuario.Text.Trim() == "" || ComboTipo.Text.Trim() == "")
+            {
+                MessageBox.Show("Complete todo los campos!");
+                return;
+            }
+
+            if (Validaciones.soloLetras(txtNombre.Text) == false)
+            {
+                MessageBox.Show("Solo se permiten letras en el campo 'nombres'.");
+                txtNombre.Focus();
+                return;
+            }
+
+            if (Validaciones.soloLetras(txtApellido.Text) == false)
+            {
+                MessageBox.Show("Solo se permiten letras en el campo 'apellidos'.");
+                txtApellido.Focus();
+                return;
+            }
+
+            object[] datosB = { txtUsuario.Text.Trim(), txtNombre.Text.Trim(), txtApellido.Text.Trim(), txtContraseña.Text.Trim(), ComboTipo.Text.Trim() };
+
+            string[] campos = { "usuario", "nombres", "apellidos", "clave", "tipo" };
+
+            string error = "";
+
+            if (obj.modificarUsuarioCtl("usuarios", campos, datosB, "usuario", usuario, ref error))
+            {
+                MessageBox.Show("Los datos del usaurios han sido modificados con exito!");
+                this.listarUsuarios();
+                this.limpiarCampos();
+            }
+
+            else
+            {
+                if (error.Contains("Duplicate entry"))
+                {
+                    MessageBox.Show("Error: El nombre de usuario ya esta asignado.");
+                }
+                else
+                {
+                    MessageBox.Show("Ocurrio un error inesperado intente de nuevo.");
+                }
+
+                return;
+            }
+        }
+
+        private void DataGridUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.usuario = DataGridUsuarios[0, DataGridUsuarios.CurrentRow.Index].Value.ToString();
+            txtUsuario.Text = DataGridUsuarios[0, DataGridUsuarios.CurrentRow.Index].Value.ToString();
+            txtNombre.Text = DataGridUsuarios[1, DataGridUsuarios.CurrentRow.Index].Value.ToString();
+            txtApellido.Text = DataGridUsuarios[2, DataGridUsuarios.CurrentRow.Index].Value.ToString();
+            ComboTipo.Text = DataGridUsuarios[3, DataGridUsuarios.CurrentRow.Index].Value.ToString();
+        }
+
+        private void btnEliminar2_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("Estas seguro de que deseas eleminar este registro?" + "\n\n" + usuario,
+                "ATENCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.Yes)
+            {
+                obj.eliminarUsuarioCtl(usuario);
+                this.listarUsuarios();
+                this.limpiarCampos();
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            this.limpiarCampos();
         }
     }
 }

@@ -128,7 +128,7 @@ namespace ModernGUI_V3.Controlador
 
         public bool eliminarUsuarioCtl(string _usr)
         {
-            return (bd.EjecutarSQL("DELETE FROM usuarios WHERE cuenta = '" + _usr + "';"));
+            return (bd.EjecutarSQL("DELETE FROM usuarios WHERE usuario = '" + _usr + "';"));
         }
     }
 }

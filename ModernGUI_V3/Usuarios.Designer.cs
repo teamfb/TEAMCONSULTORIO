@@ -46,10 +46,11 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.ComboTipo = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEliminar2 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAgregar2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -171,11 +172,18 @@
             // 
             // DataGridUsuarios
             // 
+            this.DataGridUsuarios.AllowUserToAddRows = false;
+            this.DataGridUsuarios.AllowUserToDeleteRows = false;
             this.DataGridUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridUsuarios.Location = new System.Drawing.Point(71, 322);
+            this.DataGridUsuarios.MultiSelect = false;
             this.DataGridUsuarios.Name = "DataGridUsuarios";
+            this.DataGridUsuarios.ReadOnly = true;
+            this.DataGridUsuarios.RowHeadersVisible = false;
+            this.DataGridUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridUsuarios.Size = new System.Drawing.Size(1011, 196);
             this.DataGridUsuarios.TabIndex = 27;
+            this.DataGridUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridUsuarios_CellClick);
             // 
             // btnAgregar
             // 
@@ -209,6 +217,7 @@
             this.btnEliminar.TabIndex = 30;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // txtBusqueda
             // 
@@ -231,16 +240,17 @@
             this.ComboTipo.TabIndex = 37;
             this.ComboTipo.SelectedIndexChanged += new System.EventHandler(this.ComboTipo_SelectedIndexChanged);
             // 
-            // button1
+            // btnEliminar2
             // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(896, 242);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(69, 24);
-            this.button1.TabIndex = 60;
-            this.button1.Text = "Eliminar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEliminar2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar2.Location = new System.Drawing.Point(896, 242);
+            this.btnEliminar2.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar2.Name = "btnEliminar2";
+            this.btnEliminar2.Size = new System.Drawing.Size(69, 24);
+            this.btnEliminar2.TabIndex = 60;
+            this.btnEliminar2.Text = "Eliminar";
+            this.btnEliminar2.UseVisualStyleBackColor = true;
+            this.btnEliminar2.Click += new System.EventHandler(this.btnEliminar2_Click);
             // 
             // button2
             // 
@@ -252,6 +262,7 @@
             this.button2.TabIndex = 59;
             this.button2.Text = "Editar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnAgregar2
             // 
@@ -277,14 +288,27 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(896, 284);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(156, 24);
+            this.btnLimpiar.TabIndex = 62;
+            this.btnLimpiar.Text = "Limpiar campos";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1126, 551);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEliminar2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnAgregar2);
             this.Controls.Add(this.ComboTipo);
@@ -337,9 +361,10 @@
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox ComboTipo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEliminar2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnAgregar2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }
