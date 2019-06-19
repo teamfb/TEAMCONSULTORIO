@@ -223,5 +223,10 @@ namespace ModernGUI_V3
         {
             this.limpiarCampos();
         }
+
+        private void txtContraseña_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

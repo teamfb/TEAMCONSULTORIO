@@ -123,7 +123,22 @@ namespace ModernGUI_V3.Controlador
 
         public bool modificarUsuarioCtl(string _tbl, string[] _campos, object[] _datos, string _key, object _valorkey, ref string _error)
         {
-            return (bd.ModificarRegistro(_tbl, _campos, _datos, _key, _valorkey, ref _error));
+            if (_datos[3].ToString() == "")
+            {
+
+                List<object> list = _datos.ToList();
+                List<string> list2 = _campos.ToList();
+
+                list.RemoveAt(3);
+                list2.RemoveAt(3);
+
+                return (bd.ModificarRegistro(_tbl, list2.ToArray(), list.ToArray(), _key, _valorkey, ref _error));
+            }
+            else
+            {
+                _datos[3] = obtieneMD5(_datos[3].ToString());
+                return (bd.ModificarRegistro(_tbl, _campos, _datos, _key, _valorkey, ref _error));
+            }
         }
 
         public bool eliminarUsuarioCtl(string _usr)
