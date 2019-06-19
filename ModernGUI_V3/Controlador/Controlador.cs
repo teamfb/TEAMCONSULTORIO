@@ -145,5 +145,31 @@ namespace ModernGUI_V3.Controlador
         {
             return (bd.EjecutarSQL("DELETE FROM usuarios WHERE usuario = '" + _usr + "';"));
         }
+
+        public bool eliminarUsuarioCtl(string _clave, ref string _error)
+        {
+            return this.bd.EjecutarSQL("DELETE FROM usuarios WHERE usuario ='" + _clave + "';", ref _error);
+        }
     }
+
+    public class controladorConsultas : ControlBD
+    {
+        public controladorConsultas(ControlConfig _cfg)  // Constructor que asocia un archivo de configuración que ya
+        {                                            // fue leído. (Para no releer el config.ini innecesariamente)
+            bd = new BDMySQL(_cfg.cadconn);
+        }
+        //metodo para hacer un ficticio autoincrement en la bd pero mediante c# reinventar la rueda ._.
+        public int sigNumeroUsuarioCtl()
+        {
+            int sgte = Convert.ToInt32(bd.LeerNumerico("SELECT MAX(id_consulta) FROM consultas;")) + 1;
+            return (sgte);
+        }
+        public bool agregarConsultaCtl(object[] _datos)
+        {
+            //mandar el nombre de la tabla y de los datos de la tabla al metodo al 
+            return (bd.InsertarRegistro("consultas", _datos));
+        }
+
+    }
+
 }

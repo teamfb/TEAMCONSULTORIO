@@ -35,7 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.DateTime = new System.Windows.Forms.DateTimePicker();
+            this.DateTimeFecha = new System.Windows.Forms.DateTimePicker();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtP = new System.Windows.Forms.TextBox();
@@ -55,6 +55,7 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnBusqueda = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.BarraTitulo.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -104,9 +105,9 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(22, 53);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 17);
+            this.label3.Size = new System.Drawing.Size(54, 17);
             this.label3.TabIndex = 44;
-            this.label3.Text = "Nombre:";
+            this.label3.Text = "Usuario:";
             // 
             // txtNombre
             // 
@@ -115,6 +116,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(339, 20);
             this.txtNombre.TabIndex = 45;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // label9
             // 
@@ -126,12 +128,13 @@
             this.label9.TabIndex = 72;
             this.label9.Text = "Fecha:";
             // 
-            // DateTime
+            // DateTimeFecha
             // 
-            this.DateTime.Location = new System.Drawing.Point(548, 53);
-            this.DateTime.Name = "DateTime";
-            this.DateTime.Size = new System.Drawing.Size(200, 20);
-            this.DateTime.TabIndex = 71;
+            this.DateTimeFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateTimeFecha.Location = new System.Drawing.Point(548, 53);
+            this.DateTimeFecha.Name = "DateTimeFecha";
+            this.DateTimeFecha.Size = new System.Drawing.Size(200, 20);
+            this.DateTimeFecha.TabIndex = 71;
             // 
             // groupBox4
             // 
@@ -255,6 +258,7 @@
             this.txtS.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtS.Size = new System.Drawing.Size(578, 105);
             this.txtS.TabIndex = 55;
+            this.txtS.TextChanged += new System.EventHandler(this.txtS_TextChanged);
             // 
             // groupBox5
             // 
@@ -309,6 +313,7 @@
             this.btnGuardar.TabIndex = 75;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnBusqueda
             // 
@@ -333,18 +338,26 @@
             this.btnRegresar.UseVisualStyleBackColor = true;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(260, 83);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 78;
+            // 
             // NuevaConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1204, 725);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnBusqueda);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.DateTime);
+            this.Controls.Add(this.DateTimeFecha);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -357,6 +370,7 @@
             this.Name = "NuevaConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NuevaConsulta";
+            this.Load += new System.EventHandler(this.NuevaConsulta_Load);
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -384,7 +398,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker DateTime;
+        private System.Windows.Forms.DateTimePicker DateTimeFecha;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtP;
@@ -404,5 +418,6 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnBusqueda;
         private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

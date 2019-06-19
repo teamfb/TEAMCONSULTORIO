@@ -106,7 +106,7 @@ namespace ModernGUI_V3
                 MessageBox.Show("Usuario guardado con exito!");
 
                 this.listarUsuarios();
-                //this.limpiarCampos();
+                this.limpiarCampos();
             }
             else
             {
@@ -202,15 +202,34 @@ namespace ModernGUI_V3
 
         private void btnEliminar2_Click(object sender, EventArgs e)
         {
-            DialogResult respuesta;
-            respuesta = MessageBox.Show("Estas seguro de que deseas eleminar este registro?" + "\n\n" + usuario,
-                "ATENCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (respuesta == DialogResult.Yes)
+            string text2 = "";
+            DialogResult dialogResult = MessageBox.Show(string.Concat(new object[]
             {
-                obj.eliminarUsuarioCtl(usuario);
-                this.listarUsuarios();
-                this.limpiarCampos();
+                "¿Está seguro(a) de que desea ELIMINAR el registro del usuario? \n\n",
+                this.usuario,
+            }), "ATENCIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            bool flag = dialogResult == DialogResult.Yes;
+            if (flag)
+            {
+                this.obj.eliminarUsuarioCtl(this.usuario, ref text2);
+                bool flag2 = text2.Contains("foreign key constrain");
+                if (flag2)
+                {
+                    MessageBox.Show("El usuario no se puede eliminar porque tiene registros asociados.");
+                }
+                else
+                {
+                    bool flag3 = text2 != "";
+                    if (flag3)
+                    {
+                        MessageBox.Show(text2);
+                    }
+                    else
+                    {
+                        this.listarUsuarios();
+                        this.limpiarCampos();
+                    }
+                }
             }
         }
 
