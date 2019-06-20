@@ -27,6 +27,8 @@ namespace ModernGUI_V3
 
         private bool usuarioExistente = false;
 
+        //nos quedamos en validar en que el usuario tecleado exista para poder realizar la consulta.
+
         private void BarraTitulo_MouseMove(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -97,7 +99,35 @@ namespace ModernGUI_V3
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-
+            if(txtNombre.Text != "")
+            {
+                lavelUsuarioRegistrado.Visible = true;
+            }
+            else
+            {
+                lavelUsuarioRegistrado.Visible = false;
+            }
+            this.usuarioExistente = obj.usuarioExistenteCtl(txtNombre.Text.Trim());
+            if (this.usuarioExistente)
+            {
+                lavelUsuarioRegistrado.Text = "Usuario existente";
+                lavelUsuarioRegistrado.ForeColor = Color.LimeGreen;
+                txtA.Enabled = true;
+                txtO.Enabled = true;
+                txtP.Enabled = true;
+                txtS.Enabled = true;
+                txtPlan.Enabled = true;
+            }
+            else
+            { 
+                lavelUsuarioRegistrado.Text = "Usuario no registrado";
+                lavelUsuarioRegistrado.ForeColor = Color.Red;
+                txtA.Enabled = false;
+                txtO.Enabled = false;
+                txtP.Enabled = false;
+                txtS.Enabled = false;
+                txtPlan.Enabled = false;
+            }
         }
     }
 }

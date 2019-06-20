@@ -170,6 +170,14 @@ namespace ModernGUI_V3.Controlador
             return (bd.InsertarRegistro("consultas", _datos));
         }
 
+        public bool usuarioExistenteCtl(string usuario)
+        {
+            string error = "";
+            DataRow registro = bd.Leer1Registro("SELECT * FROM usuarios WHERE usuario='" + usuario + "';", ref error);
+            if (error != "") return false;
+            else return true;
+        }
+
     }
 
 }
