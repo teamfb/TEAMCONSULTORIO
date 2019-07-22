@@ -56,6 +56,7 @@
             this.btnBusqueda = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.lavelUsuarioRegistrado = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -92,7 +93,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 83);
+            this.label2.Location = new System.Drawing.Point(22, 95);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(159, 16);
@@ -340,16 +341,29 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(260, 83);
+            this.txtId.Location = new System.Drawing.Point(261, 91);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 78;
+            // 
+            // lavelUsuarioRegistrado
+            // 
+            this.lavelUsuarioRegistrado.AutoSize = true;
+            this.lavelUsuarioRegistrado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lavelUsuarioRegistrado.ForeColor = System.Drawing.Color.Red;
+            this.lavelUsuarioRegistrado.Location = new System.Drawing.Point(83, 74);
+            this.lavelUsuarioRegistrado.Name = "lavelUsuarioRegistrado";
+            this.lavelUsuarioRegistrado.Size = new System.Drawing.Size(147, 16);
+            this.lavelUsuarioRegistrado.TabIndex = 79;
+            this.lavelUsuarioRegistrado.Text = "Usuario no registrado";
+            this.lavelUsuarioRegistrado.Visible = false;
             // 
             // NuevaConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1204, 725);
+            this.Controls.Add(this.lavelUsuarioRegistrado);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnBusqueda);
@@ -419,5 +433,6 @@
         private System.Windows.Forms.Button btnBusqueda;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label lavelUsuarioRegistrado;
     }
 }
