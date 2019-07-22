@@ -107,6 +107,11 @@ namespace ModernGUI_V3
             if (intentos == 3)
                 Application.Exit();
         }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     } // fin clase
 }
     
