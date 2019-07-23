@@ -53,7 +53,6 @@ C:\Users\anitza.bujanda\Documents\Proyecto consultorio\Consultorio\ModernGUI_V3\
 C:\Users\Federico\Documents\TEAMCONSULTORIO\ModernGUI_V3\bin\Debug\ModernGUI_V3.exe.config
 C:\Users\Federico\Documents\TEAMCONSULTORIO\ModernGUI_V3\bin\Debug\ModernGUI_V3.exe
 C:\Users\Federico\Documents\TEAMCONSULTORIO\ModernGUI_V3\bin\Debug\ModernGUI_V3.pdb
-C:\Users\Federico\Documents\TEAMCONSULTORIO\ModernGUI_V3\obj\Debug\ModernGUI_V3.csprojResolveAssemblyReference.cache
 C:\Users\Federico\Documents\TEAMCONSULTORIO\ModernGUI_V3\obj\Debug\ModernGUI_V3.Login.resources
 C:\Users\Federico\Documents\TEAMCONSULTORIO\ModernGUI_V3\obj\Debug\ModernGUI_V3.NuevaConsulta.resources
 C:\Users\Federico\Documents\TEAMCONSULTORIO\ModernGUI_V3\obj\Debug\ModernGUI_V3.Usuarios.resources
@@ -78,3 +77,6 @@ C:\Users\anitza.bujanda\Documents\Proyecto consultorio\TEAMCONSULTORIO\ModernGUI
 C:\Users\anitza.bujanda\Documents\Proyecto consultorio\TEAMCONSULTORIO\ModernGUI_V3\obj\Debug\ModernGUI_V3.FormPrincipal.resources
 C:\Users\anitza.bujanda\Documents\Proyecto consultorio\TEAMCONSULTORIO\ModernGUI_V3\obj\Debug\ModernGUI_V3.Properties.Resources.resources
 C:\Users\anitza.bujanda\Documents\Proyecto consultorio\TEAMCONSULTORIO\ModernGUI_V3\obj\Debug\ModernGUI_V3.csproj.GenerateResource.Cache
+C:\Users\Federico\Documents\TEAMCONSULTORIO\ModernGUI_V3\obj\Debug\ModernGUI_V3.csprojAssemblyReference.cache
+C:\Users\Federico\Documents\TEAMCONSULTORIO\ModernGUI_V3\obj\Debug\ModernGUI_V3.csproj.CoreCompileInputs.cache
+C:\Users\Federico\Documents\TEAMCONSULTORIO\ModernGUI_V3\obj\Debug\ModernGUI_V3.csproj.CopyComplete

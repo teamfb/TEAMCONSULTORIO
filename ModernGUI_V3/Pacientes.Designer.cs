@@ -207,10 +207,33 @@
             this.txtCardio = new System.Windows.Forms.TextBox();
             this.CheckCardio = new System.Windows.Forms.CheckBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label60 = new System.Windows.Forms.Label();
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
@@ -275,29 +298,8 @@
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label60 = new System.Windows.Forms.Label();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.textBox27 = new System.Windows.Forms.TextBox();
             this.BarraTitulo.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -315,23 +317,23 @@
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.groupBox20.SuspendLayout();
+            this.groupBox19.SuspendLayout();
+            this.groupBox18.SuspendLayout();
+            this.groupBox17.SuspendLayout();
+            this.groupBox16.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox10.SuspendLayout();
-            this.groupBox11.SuspendLayout();
-            this.groupBox12.SuspendLayout();
-            this.groupBox13.SuspendLayout();
-            this.groupBox14.SuspendLayout();
-            this.groupBox15.SuspendLayout();
-            this.groupBox16.SuspendLayout();
-            this.groupBox17.SuspendLayout();
-            this.groupBox18.SuspendLayout();
-            this.groupBox19.SuspendLayout();
-            this.groupBox20.SuspendLayout();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -377,6 +379,8 @@
             // 
             this.tabPage1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.label49);
+            this.tabPage1.Controls.Add(this.textBox27);
             this.tabPage1.Controls.Add(this.btnBusqueda);
             this.tabPage1.Controls.Add(this.txtBusqueda);
             this.tabPage1.Controls.Add(this.label14);
@@ -423,7 +427,7 @@
             this.btnBusqueda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBusqueda.BackgroundImage")));
             this.btnBusqueda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnBusqueda.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBusqueda.Location = new System.Drawing.Point(631, 312);
+            this.btnBusqueda.Location = new System.Drawing.Point(629, 314);
             this.btnBusqueda.Margin = new System.Windows.Forms.Padding(2);
             this.btnBusqueda.Name = "btnBusqueda";
             this.btnBusqueda.Size = new System.Drawing.Size(34, 24);
@@ -458,7 +462,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(324, 234);
+            this.textBox7.Location = new System.Drawing.Point(325, 252);
             this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(126, 21);
@@ -468,7 +472,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(245, 239);
+            this.label13.Location = new System.Drawing.Point(246, 257);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(55, 16);
             this.label13.TabIndex = 71;
@@ -476,7 +480,7 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(523, 145);
+            this.txtTelefono.Location = new System.Drawing.Point(521, 113);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(142, 21);
@@ -486,7 +490,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(459, 150);
+            this.label5.Location = new System.Drawing.Point(460, 116);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 16);
             this.label5.TabIndex = 69;
@@ -494,7 +498,7 @@
             // 
             // txtEscolaridad
             // 
-            this.txtEscolaridad.Location = new System.Drawing.Point(324, 190);
+            this.txtEscolaridad.Location = new System.Drawing.Point(325, 208);
             this.txtEscolaridad.Margin = new System.Windows.Forms.Padding(2);
             this.txtEscolaridad.Name = "txtEscolaridad";
             this.txtEscolaridad.Size = new System.Drawing.Size(126, 21);
@@ -507,7 +511,7 @@
             "Soltero(a)",
             "Casado(a)",
             "Viudo(a)"});
-            this.ComboEscolaridad.Location = new System.Drawing.Point(101, 231);
+            this.ComboEscolaridad.Location = new System.Drawing.Point(102, 249);
             this.ComboEscolaridad.Name = "ComboEscolaridad";
             this.ComboEscolaridad.Size = new System.Drawing.Size(126, 24);
             this.ComboEscolaridad.TabIndex = 67;
@@ -516,7 +520,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(23, 239);
+            this.label9.Location = new System.Drawing.Point(24, 257);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(77, 16);
             this.label9.TabIndex = 66;
@@ -524,30 +528,30 @@
             // 
             // DateTime
             // 
-            this.DateTime.Location = new System.Drawing.Point(156, 95);
+            this.DateTime.Location = new System.Drawing.Point(157, 113);
             this.DateTime.Name = "DateTime";
-            this.DateTime.Size = new System.Drawing.Size(260, 21);
+            this.DateTime.Size = new System.Drawing.Size(294, 21);
             this.DateTime.TabIndex = 65;
             // 
             // txtSangre
             // 
-            this.txtSangre.Location = new System.Drawing.Point(248, 59);
+            this.txtSangre.Location = new System.Drawing.Point(249, 77);
             this.txtSangre.Margin = new System.Windows.Forms.Padding(2);
             this.txtSangre.Name = "txtSangre";
-            this.txtSangre.Size = new System.Drawing.Size(177, 21);
+            this.txtSangre.Size = new System.Drawing.Size(202, 21);
             this.txtSangre.TabIndex = 62;
             // 
             // txtDomicilio
             // 
-            this.txtDomicilio.Location = new System.Drawing.Point(86, 145);
+            this.txtDomicilio.Location = new System.Drawing.Point(102, 163);
             this.txtDomicilio.Margin = new System.Windows.Forms.Padding(2);
             this.txtDomicilio.Name = "txtDomicilio";
-            this.txtDomicilio.Size = new System.Drawing.Size(339, 21);
+            this.txtDomicilio.Size = new System.Drawing.Size(349, 21);
             this.txtDomicilio.TabIndex = 61;
             // 
             // txtOcupacion
             // 
-            this.txtOcupacion.Location = new System.Drawing.Point(101, 190);
+            this.txtOcupacion.Location = new System.Drawing.Point(102, 208);
             this.txtOcupacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtOcupacion.Name = "txtOcupacion";
             this.txtOcupacion.Size = new System.Drawing.Size(126, 21);
@@ -567,7 +571,7 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(963, 29);
+            this.btnEditar.Location = new System.Drawing.Point(961, 27);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(69, 24);
@@ -591,7 +595,7 @@
             // 
             this.RadioM.AutoSize = true;
             this.RadioM.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadioM.Location = new System.Drawing.Point(103, 61);
+            this.RadioM.Location = new System.Drawing.Point(104, 79);
             this.RadioM.Name = "RadioM";
             this.RadioM.Size = new System.Drawing.Size(37, 20);
             this.RadioM.TabIndex = 54;
@@ -603,7 +607,7 @@
             // 
             this.RadioF.AutoSize = true;
             this.RadioF.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadioF.Location = new System.Drawing.Point(66, 60);
+            this.RadioF.Location = new System.Drawing.Point(70, 79);
             this.RadioF.Name = "RadioF";
             this.RadioF.Size = new System.Drawing.Size(31, 20);
             this.RadioF.TabIndex = 53;
@@ -615,7 +619,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(23, 62);
+            this.label12.Location = new System.Drawing.Point(24, 79);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(37, 16);
             this.label12.TabIndex = 52;
@@ -625,7 +629,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(153, 61);
+            this.label11.Location = new System.Drawing.Point(154, 79);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(90, 16);
             this.label11.TabIndex = 51;
@@ -635,7 +639,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(23, 150);
+            this.label10.Location = new System.Drawing.Point(24, 168);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(58, 16);
             this.label10.TabIndex = 50;
@@ -645,7 +649,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(22, 195);
+            this.label8.Location = new System.Drawing.Point(23, 213);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 16);
             this.label8.TabIndex = 49;
@@ -655,7 +659,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(245, 193);
+            this.label7.Location = new System.Drawing.Point(246, 211);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 16);
             this.label7.TabIndex = 48;
@@ -663,7 +667,7 @@
             // 
             // txtLugar
             // 
-            this.txtLugar.Location = new System.Drawing.Point(587, 95);
+            this.txtLugar.Location = new System.Drawing.Point(588, 76);
             this.txtLugar.Margin = new System.Windows.Forms.Padding(2);
             this.txtLugar.Name = "txtLugar";
             this.txtLugar.Size = new System.Drawing.Size(156, 21);
@@ -673,7 +677,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(459, 100);
+            this.label6.Location = new System.Drawing.Point(460, 79);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(123, 16);
             this.label6.TabIndex = 46;
@@ -683,7 +687,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 100);
+            this.label4.Location = new System.Drawing.Point(24, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(127, 16);
             this.label4.TabIndex = 45;
@@ -693,7 +697,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(459, 27);
+            this.label3.Location = new System.Drawing.Point(460, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 17);
             this.label3.TabIndex = 44;
@@ -703,7 +707,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 27);
+            this.label2.Location = new System.Drawing.Point(23, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 17);
             this.label2.TabIndex = 43;
@@ -711,7 +715,7 @@
             // 
             // txtEdad
             // 
-            this.txtEdad.Location = new System.Drawing.Point(505, 25);
+            this.txtEdad.Location = new System.Drawing.Point(506, 43);
             this.txtEdad.Margin = new System.Windows.Forms.Padding(2);
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(49, 21);
@@ -719,10 +723,10 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(86, 25);
+            this.txtNombre.Location = new System.Drawing.Point(87, 43);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(339, 21);
+            this.txtNombre.Size = new System.Drawing.Size(364, 21);
             this.txtNombre.TabIndex = 39;
             // 
             // tabPage2
@@ -2223,6 +2227,215 @@
             this.tabPage5.Text = "Ant. Aparatos y Sistemas";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.textBox26);
+            this.groupBox20.Location = new System.Drawing.Point(992, 426);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(288, 127);
+            this.groupBox20.TabIndex = 87;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "GENITAL";
+            // 
+            // textBox26
+            // 
+            this.textBox26.Location = new System.Drawing.Point(18, 31);
+            this.textBox26.Multiline = true;
+            this.textBox26.Name = "textBox26";
+            this.textBox26.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox26.Size = new System.Drawing.Size(254, 76);
+            this.textBox26.TabIndex = 70;
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.textBox25);
+            this.groupBox19.Location = new System.Drawing.Point(515, 559);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(463, 127);
+            this.groupBox19.TabIndex = 87;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "MÚSCULO ESQUELÉTICO";
+            // 
+            // textBox25
+            // 
+            this.textBox25.Location = new System.Drawing.Point(18, 31);
+            this.textBox25.Multiline = true;
+            this.textBox25.Name = "textBox25";
+            this.textBox25.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox25.Size = new System.Drawing.Size(400, 76);
+            this.textBox25.TabIndex = 70;
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.Controls.Add(this.textBox24);
+            this.groupBox18.Location = new System.Drawing.Point(515, 426);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(463, 127);
+            this.groupBox18.TabIndex = 86;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "PIEL Y MUCOSAS";
+            // 
+            // textBox24
+            // 
+            this.textBox24.Location = new System.Drawing.Point(18, 31);
+            this.textBox24.Multiline = true;
+            this.textBox24.Name = "textBox24";
+            this.textBox24.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox24.Size = new System.Drawing.Size(400, 76);
+            this.textBox24.TabIndex = 70;
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.textBox23);
+            this.groupBox17.Location = new System.Drawing.Point(515, 293);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(463, 127);
+            this.groupBox17.TabIndex = 85;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "PSIQUICO";
+            // 
+            // textBox23
+            // 
+            this.textBox23.Location = new System.Drawing.Point(18, 31);
+            this.textBox23.Multiline = true;
+            this.textBox23.Name = "textBox23";
+            this.textBox23.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox23.Size = new System.Drawing.Size(400, 76);
+            this.textBox23.TabIndex = 70;
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.textBox22);
+            this.groupBox16.Location = new System.Drawing.Point(515, 160);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(463, 127);
+            this.groupBox16.TabIndex = 84;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "URINARIO";
+            // 
+            // textBox22
+            // 
+            this.textBox22.Location = new System.Drawing.Point(18, 31);
+            this.textBox22.Multiline = true;
+            this.textBox22.Name = "textBox22";
+            this.textBox22.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox22.Size = new System.Drawing.Size(400, 76);
+            this.textBox22.TabIndex = 70;
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.textBox21);
+            this.groupBox15.Location = new System.Drawing.Point(515, 27);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(463, 127);
+            this.groupBox15.TabIndex = 83;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "ENDOCRINO";
+            // 
+            // textBox21
+            // 
+            this.textBox21.Location = new System.Drawing.Point(18, 31);
+            this.textBox21.Multiline = true;
+            this.textBox21.Name = "textBox21";
+            this.textBox21.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox21.Size = new System.Drawing.Size(400, 76);
+            this.textBox21.TabIndex = 70;
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.textBox20);
+            this.groupBox14.Location = new System.Drawing.Point(29, 559);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(463, 127);
+            this.groupBox14.TabIndex = 86;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "NERVIOSO";
+            // 
+            // textBox20
+            // 
+            this.textBox20.Location = new System.Drawing.Point(18, 31);
+            this.textBox20.Multiline = true;
+            this.textBox20.Name = "textBox20";
+            this.textBox20.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox20.Size = new System.Drawing.Size(400, 76);
+            this.textBox20.TabIndex = 70;
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.textBox19);
+            this.groupBox13.Location = new System.Drawing.Point(29, 426);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(463, 127);
+            this.groupBox13.TabIndex = 85;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "LINFÁTICO Y SANGUÍNEO";
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(18, 31);
+            this.textBox19.Multiline = true;
+            this.textBox19.Name = "textBox19";
+            this.textBox19.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox19.Size = new System.Drawing.Size(400, 76);
+            this.textBox19.TabIndex = 70;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.textBox18);
+            this.groupBox12.Location = new System.Drawing.Point(29, 293);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(463, 127);
+            this.groupBox12.TabIndex = 84;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "CIRCULATORIO";
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(18, 31);
+            this.textBox18.Multiline = true;
+            this.textBox18.Name = "textBox18";
+            this.textBox18.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox18.Size = new System.Drawing.Size(400, 76);
+            this.textBox18.TabIndex = 70;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.textBox17);
+            this.groupBox11.Location = new System.Drawing.Point(29, 160);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(463, 127);
+            this.groupBox11.TabIndex = 83;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "SINTOMAS";
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(18, 31);
+            this.textBox17.Multiline = true;
+            this.textBox17.Name = "textBox17";
+            this.textBox17.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox17.Size = new System.Drawing.Size(400, 76);
+            this.textBox17.TabIndex = 70;
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.textBox16);
+            this.groupBox10.Location = new System.Drawing.Point(29, 27);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(463, 127);
+            this.groupBox10.TabIndex = 82;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "PADECIMIENTO ACTÚAL";
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(18, 31);
+            this.textBox16.Multiline = true;
+            this.textBox16.Name = "textBox16";
+            this.textBox16.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox16.Size = new System.Drawing.Size(400, 76);
+            this.textBox16.TabIndex = 70;
+            // 
             // button15
             // 
             this.button15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2269,6 +2482,15 @@
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Exploración Física";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(63, 47);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(91, 15);
+            this.label60.TabIndex = 70;
+            this.label60.Text = "SIGNOS VITALES";
             // 
             // button19
             // 
@@ -2893,229 +3115,29 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
-            // textBox16
+            // label49
             // 
-            this.textBox16.Location = new System.Drawing.Point(18, 31);
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox16.Size = new System.Drawing.Size(400, 76);
-            this.textBox16.TabIndex = 70;
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(23, 15);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(89, 17);
+            this.label49.TabIndex = 78;
+            this.label49.Text = "No. paciente:";
             // 
-            // label60
+            // textBox27
             // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(63, 47);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(91, 15);
-            this.label60.TabIndex = 70;
-            this.label60.Text = "SIGNOS VITALES";
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.textBox16);
-            this.groupBox10.Location = new System.Drawing.Point(29, 27);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(463, 127);
-            this.groupBox10.TabIndex = 82;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "PADECIMIENTO ACTÚAL";
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.textBox17);
-            this.groupBox11.Location = new System.Drawing.Point(29, 160);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(463, 127);
-            this.groupBox11.TabIndex = 83;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "SINTOMAS";
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(18, 31);
-            this.textBox17.Multiline = true;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox17.Size = new System.Drawing.Size(400, 76);
-            this.textBox17.TabIndex = 70;
-            // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.textBox18);
-            this.groupBox12.Location = new System.Drawing.Point(29, 293);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(463, 127);
-            this.groupBox12.TabIndex = 84;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "CIRCULATORIO";
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(18, 31);
-            this.textBox18.Multiline = true;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox18.Size = new System.Drawing.Size(400, 76);
-            this.textBox18.TabIndex = 70;
-            // 
-            // groupBox13
-            // 
-            this.groupBox13.Controls.Add(this.textBox19);
-            this.groupBox13.Location = new System.Drawing.Point(29, 426);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(463, 127);
-            this.groupBox13.TabIndex = 85;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "LINFÁTICO Y SANGUÍNEO";
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(18, 31);
-            this.textBox19.Multiline = true;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox19.Size = new System.Drawing.Size(400, 76);
-            this.textBox19.TabIndex = 70;
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.Controls.Add(this.textBox20);
-            this.groupBox14.Location = new System.Drawing.Point(29, 559);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(463, 127);
-            this.groupBox14.TabIndex = 86;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "NERVIOSO";
-            // 
-            // textBox20
-            // 
-            this.textBox20.Location = new System.Drawing.Point(18, 31);
-            this.textBox20.Multiline = true;
-            this.textBox20.Name = "textBox20";
-            this.textBox20.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox20.Size = new System.Drawing.Size(400, 76);
-            this.textBox20.TabIndex = 70;
-            // 
-            // groupBox15
-            // 
-            this.groupBox15.Controls.Add(this.textBox21);
-            this.groupBox15.Location = new System.Drawing.Point(515, 27);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(463, 127);
-            this.groupBox15.TabIndex = 83;
-            this.groupBox15.TabStop = false;
-            this.groupBox15.Text = "ENDOCRINO";
-            // 
-            // textBox21
-            // 
-            this.textBox21.Location = new System.Drawing.Point(18, 31);
-            this.textBox21.Multiline = true;
-            this.textBox21.Name = "textBox21";
-            this.textBox21.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox21.Size = new System.Drawing.Size(400, 76);
-            this.textBox21.TabIndex = 70;
-            // 
-            // groupBox16
-            // 
-            this.groupBox16.Controls.Add(this.textBox22);
-            this.groupBox16.Location = new System.Drawing.Point(515, 160);
-            this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(463, 127);
-            this.groupBox16.TabIndex = 84;
-            this.groupBox16.TabStop = false;
-            this.groupBox16.Text = "URINARIO";
-            // 
-            // textBox22
-            // 
-            this.textBox22.Location = new System.Drawing.Point(18, 31);
-            this.textBox22.Multiline = true;
-            this.textBox22.Name = "textBox22";
-            this.textBox22.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox22.Size = new System.Drawing.Size(400, 76);
-            this.textBox22.TabIndex = 70;
-            // 
-            // groupBox17
-            // 
-            this.groupBox17.Controls.Add(this.textBox23);
-            this.groupBox17.Location = new System.Drawing.Point(515, 293);
-            this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(463, 127);
-            this.groupBox17.TabIndex = 85;
-            this.groupBox17.TabStop = false;
-            this.groupBox17.Text = "PSIQUICO";
-            // 
-            // textBox23
-            // 
-            this.textBox23.Location = new System.Drawing.Point(18, 31);
-            this.textBox23.Multiline = true;
-            this.textBox23.Name = "textBox23";
-            this.textBox23.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox23.Size = new System.Drawing.Size(400, 76);
-            this.textBox23.TabIndex = 70;
-            // 
-            // groupBox18
-            // 
-            this.groupBox18.Controls.Add(this.textBox24);
-            this.groupBox18.Location = new System.Drawing.Point(515, 426);
-            this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(463, 127);
-            this.groupBox18.TabIndex = 86;
-            this.groupBox18.TabStop = false;
-            this.groupBox18.Text = "PIEL Y MUCOSAS";
-            // 
-            // textBox24
-            // 
-            this.textBox24.Location = new System.Drawing.Point(18, 31);
-            this.textBox24.Multiline = true;
-            this.textBox24.Name = "textBox24";
-            this.textBox24.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox24.Size = new System.Drawing.Size(400, 76);
-            this.textBox24.TabIndex = 70;
-            // 
-            // groupBox19
-            // 
-            this.groupBox19.Controls.Add(this.textBox25);
-            this.groupBox19.Location = new System.Drawing.Point(515, 559);
-            this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Size = new System.Drawing.Size(463, 127);
-            this.groupBox19.TabIndex = 87;
-            this.groupBox19.TabStop = false;
-            this.groupBox19.Text = "MÚSCULO ESQUELÉTICO";
-            // 
-            // textBox25
-            // 
-            this.textBox25.Location = new System.Drawing.Point(18, 31);
-            this.textBox25.Multiline = true;
-            this.textBox25.Name = "textBox25";
-            this.textBox25.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox25.Size = new System.Drawing.Size(400, 76);
-            this.textBox25.TabIndex = 70;
-            // 
-            // groupBox20
-            // 
-            this.groupBox20.Controls.Add(this.textBox26);
-            this.groupBox20.Location = new System.Drawing.Point(992, 426);
-            this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Size = new System.Drawing.Size(288, 127);
-            this.groupBox20.TabIndex = 87;
-            this.groupBox20.TabStop = false;
-            this.groupBox20.Text = "GENITAL";
-            // 
-            // textBox26
-            // 
-            this.textBox26.Location = new System.Drawing.Point(18, 31);
-            this.textBox26.Multiline = true;
-            this.textBox26.Name = "textBox26";
-            this.textBox26.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox26.Size = new System.Drawing.Size(254, 76);
-            this.textBox26.TabIndex = 70;
+            this.textBox27.Location = new System.Drawing.Point(122, 13);
+            this.textBox27.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox27.Name = "textBox27";
+            this.textBox27.Size = new System.Drawing.Size(49, 21);
+            this.textBox27.TabIndex = 77;
             // 
             // Pacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1325, 788);
+            this.ClientSize = new System.Drawing.Size(1325, 780);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.BarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -3153,6 +3175,28 @@
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.tabPage5.ResumeLayout(false);
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             this.tabPage7.ResumeLayout(false);
@@ -3165,28 +3209,6 @@
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
-            this.groupBox13.ResumeLayout(false);
-            this.groupBox13.PerformLayout();
-            this.groupBox14.ResumeLayout(false);
-            this.groupBox14.PerformLayout();
-            this.groupBox15.ResumeLayout(false);
-            this.groupBox15.PerformLayout();
-            this.groupBox16.ResumeLayout(false);
-            this.groupBox16.PerformLayout();
-            this.groupBox17.ResumeLayout(false);
-            this.groupBox17.PerformLayout();
-            this.groupBox18.ResumeLayout(false);
-            this.groupBox18.PerformLayout();
-            this.groupBox19.ResumeLayout(false);
-            this.groupBox19.PerformLayout();
-            this.groupBox20.ResumeLayout(false);
-            this.groupBox20.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3461,5 +3483,7 @@
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.TextBox textBox27;
     }
 }

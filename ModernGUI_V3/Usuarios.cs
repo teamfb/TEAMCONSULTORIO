@@ -22,7 +22,7 @@ namespace ModernGUI_V3
 
         private DataSet ds;
         private controladorUsuarios obj = new controladorUsuarios(Login.config);
-        private string usuario;
+        private string usuario = "";
    
 
         private void BarraTitulo_MouseMove(object sender, MouseEventArgs e)
@@ -134,6 +134,7 @@ namespace ModernGUI_V3
         }
         private void limpiarCampos()
         {
+            this.usuario = "";
             txtUsuario.Text = "";
             txtNombre.Text = "";
             txtApellido.Text = "";
@@ -202,6 +203,17 @@ namespace ModernGUI_V3
 
         private void btnEliminar2_Click(object sender, EventArgs e)
         {
+            if (this.usuario == "")
+            {
+                MessageBox.Show("Por favor seleccione un registro de la lista.",
+                 "Error",
+                 MessageBoxButtons.OK,
+                 MessageBoxIcon.Error,
+                 MessageBoxDefaultButton.Button1);
+
+                 return;
+            }
+
             string text2 = "";
             DialogResult dialogResult = MessageBox.Show(string.Concat(new object[]
             {
@@ -235,7 +247,46 @@ namespace ModernGUI_V3
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (this.usuario == "")
+            {
+                MessageBox.Show("Por favor seleccione un registro de la lista.",
+                 "Error",
+                 MessageBoxButtons.OK,
+                 MessageBoxIcon.Error,
+                 MessageBoxDefaultButton.Button1);
 
+                return;
+            }
+
+            string text2 = "";
+            DialogResult dialogResult = MessageBox.Show(string.Concat(new object[]
+            {
+                "¿Está seguro(a) de que desea ELIMINAR el registro del usuario? \n\n",
+                this.usuario,
+            }), "ATENCIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            bool flag = dialogResult == DialogResult.Yes;
+            if (flag)
+            {
+                this.obj.eliminarUsuarioCtl(this.usuario, ref text2);
+                bool flag2 = text2.Contains("foreign key constrain");
+                if (flag2)
+                {
+                    MessageBox.Show("El usuario no se puede eliminar porque tiene registros asociados.");
+                }
+                else
+                {
+                    bool flag3 = text2 != "";
+                    if (flag3)
+                    {
+                        MessageBox.Show(text2);
+                    }
+                    else
+                    {
+                        this.listarUsuarios();
+                        this.limpiarCampos();
+                    }
+                }
+            }
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -246,6 +297,109 @@ namespace ModernGUI_V3
         private void txtContraseña_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnLimpiar2_Click(object sender, EventArgs e)
+        {
+            this.limpiarCampos();
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            if (txtApellido.Text.Trim() == "" || txtNombre.Text.Trim() == "" || txtUsuario.Text.Trim() == "" || ComboTipo.Text.Trim() == "")
+            {
+                MessageBox.Show("Complete todo los campos!");
+                return;
+            }
+
+            if (Validaciones.soloLetras(txtNombre.Text) == false)
+            {
+                MessageBox.Show("Solo se permiten letras en el campo 'nombres'.");
+                txtNombre.Focus();
+                return;
+            }
+
+            if (Validaciones.soloLetras(txtApellido.Text) == false)
+            {
+                MessageBox.Show("Solo se permiten letras en el campo 'apellidos'.");
+                txtApellido.Focus();
+                return;
+            }
+
+            object[] datosB = { txtUsuario.Text.Trim(), txtNombre.Text.Trim(), txtApellido.Text.Trim(), txtContraseña.Text.Trim(), ComboTipo.Text.Trim() };
+
+            string[] campos = { "usuario", "nombres", "apellidos", "clave", "tipo" };
+
+            string error = "";
+
+            if (obj.modificarUsuarioCtl("usuarios", campos, datosB, "usuario", usuario, ref error))
+            {
+                MessageBox.Show("Los datos del usaurios han sido modificados con exito!");
+                this.listarUsuarios();
+                this.limpiarCampos();
+            }
+
+            else
+            {
+                if (error.Contains("Duplicate entry"))
+                {
+                    MessageBox.Show("Error: El nombre de usuario ya esta asignado.");
+                }
+                else
+                {
+                    MessageBox.Show("Ocurrio un error inesperado intente de nuevo.");
+                }
+
+                return;
+            }
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            if (txtApellido.Text.Trim() == "" || txtContraseña.Text.Trim() == "" || txtNombre.Text.Trim() == "" || txtUsuario.Text.Trim() == "" || ComboTipo.Text.Trim() == "")
+            {
+                MessageBox.Show("Complete todo los campos!");
+                return;
+            }
+
+            if (Validaciones.soloLetras(txtNombre.Text) == false)
+            {
+                MessageBox.Show("Solo se permiten letras en el campo 'nombres'.");
+                txtNombre.Focus();
+                return;
+            }
+
+            if (Validaciones.soloLetras(txtApellido.Text) == false)
+            {
+                MessageBox.Show("Solo se permiten letras en el campo 'apellidos'.");
+                txtApellido.Focus();
+                return;
+            }
+
+
+            object[] datosA = { txtUsuario.Text.Trim(), txtNombre.Text.Trim(), txtApellido.Text.Trim(), txtContraseña.Text.Trim(), ComboTipo.Text.Trim() };
+
+            string error = "";
+            if (obj.agregarUsuarioCtl(datosA, ref error))
+            {
+                MessageBox.Show("Usuario guardado con exito!");
+
+                this.listarUsuarios();
+                this.limpiarCampos();
+            }
+            else
+            {
+                if (error.Contains("Duplicate entry"))
+                {
+                    MessageBox.Show("Error: El nombre de usuario ya esta asignado.");
+                }
+                else
+                {
+                    MessageBox.Show("Ocurrio un error inesperado intente de nuevo.");
+                }
+
+                return;
+            }
         }
     }
 }

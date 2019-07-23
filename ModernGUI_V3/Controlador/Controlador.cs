@@ -106,7 +106,7 @@ namespace ModernGUI_V3.Controlador
 
         public DataSet listarUsuarios2Ctl(string _dato_a_buscar)
         {
-            iSql = "SELECT usuario, nombres, apellidos,  tipo FROM usuarios WHERE nombres LIKE ('" + _dato_a_buscar + "%') ORDER BY nombres ASC";
+            iSql = "SELECT usuario, nombres, apellidos,  tipo FROM usuarios WHERE usuario LIKE ('" + _dato_a_buscar + "%') ORDER BY nombres ASC";
             return (bd.LeerRegistros(iSql));
         }
         public bool agregarUsuarioCtl(object[] _datos, ref string _error)

@@ -86,8 +86,10 @@
             this.txtContraseña.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txtContraseña.Location = new System.Drawing.Point(400, 172);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(222, 14);
             this.txtContraseña.TabIndex = 2;
+            this.txtContraseña.Text = "123";
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
             this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
             // 
@@ -111,6 +113,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(222, 14);
             this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.Text = "fede";
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
