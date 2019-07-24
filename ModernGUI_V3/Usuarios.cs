@@ -17,7 +17,7 @@ namespace ModernGUI_V3
         public Usuarios()
         {
             InitializeComponent();
-            listarUsuarios();
+            this.listarUsuarios();
         }
 
         private DataSet ds;

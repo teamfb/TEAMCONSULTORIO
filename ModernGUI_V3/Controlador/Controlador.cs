@@ -180,4 +180,41 @@ namespace ModernGUI_V3.Controlador
 
     }
 
+    public class controladorPacientes : ControlBD
+    {
+        public controladorPacientes(ControlConfig _cfg)  // Constructor que asocia un archivo de configuración que ya
+        {                                            // fue leído. (Para no releer el config.ini innecesariamente)
+            bd = new BDMySQL(_cfg.cadconn);
+        }
+        //metodo para hacer un ficticio autoincrement en la bd pero mediante c# reinventar la rueda ._. ni pex
+        public int sigNumeroUsuarioCtl()
+        {
+            int sgte = Convert.ToInt32(bd.LeerNumerico("SELECT MAX(folio) FROM pacientes;")) + 1;
+            return (sgte);
+        }
+
+        public DataSet listarPacientesCtl()
+        {
+            iSql = "SELECT * FROM pacientes ORDER BY nombre ASC";
+            return (bd.LeerRegistros(iSql));
+        }
+
+        public DataSet listarPacientes2Ctl(string _dato_a_buscar)
+        {
+            iSql = "SELECT * FROM pacientes WHERE nombre LIKE ('" + _dato_a_buscar + "%') ORDER BY nombres ASC";
+            return (bd.LeerRegistros(iSql));
+        }
+
+        public bool agregarConsultaCtl(object[] _datos)
+        {
+            //mandar el nombre de la tabla y de los datos de la tabla al metodo al 
+            return (bd.InsertarRegistro("pacientes", _datos));
+        }
+
+        public bool eliminarPacienteCtl(int _clave, ref string _error)
+        {
+            return this.bd.EjecutarSQL("DELETE FROM pacientes WHERE folio ='" + _clave + "';", ref _error);
+        }
+    }
+
 }

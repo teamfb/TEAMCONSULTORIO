@@ -34,18 +34,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.DataGridPacientes = new System.Windows.Forms.DataGridView();
+            this.label49 = new System.Windows.Forms.Label();
+            this.txtFolio = new System.Windows.Forms.TextBox();
             this.btnBusqueda = new System.Windows.Forms.Button();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.DataGridDatosG = new System.Windows.Forms.DataGridView();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtReligion = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtEscolaridad = new System.Windows.Forms.TextBox();
-            this.ComboEscolaridad = new System.Windows.Forms.ComboBox();
+            this.cboEdoCivil = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.DateTime = new System.Windows.Forms.DateTimePicker();
+            this.DateTimeFecha = new System.Windows.Forms.DateTimePicker();
             this.txtSangre = new System.Windows.Forms.TextBox();
             this.txtDomicilio = new System.Windows.Forms.TextBox();
             this.txtOcupacion = new System.Windows.Forms.TextBox();
@@ -298,12 +300,10 @@
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label49 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
             this.BarraTitulo.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridDatosG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridPacientes)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -379,20 +379,20 @@
             // 
             this.tabPage1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.DataGridPacientes);
             this.tabPage1.Controls.Add(this.label49);
-            this.tabPage1.Controls.Add(this.textBox27);
+            this.tabPage1.Controls.Add(this.txtFolio);
             this.tabPage1.Controls.Add(this.btnBusqueda);
             this.tabPage1.Controls.Add(this.txtBusqueda);
             this.tabPage1.Controls.Add(this.label14);
-            this.tabPage1.Controls.Add(this.DataGridDatosG);
-            this.tabPage1.Controls.Add(this.textBox7);
+            this.tabPage1.Controls.Add(this.txtReligion);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.txtTelefono);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.txtEscolaridad);
-            this.tabPage1.Controls.Add(this.ComboEscolaridad);
+            this.tabPage1.Controls.Add(this.cboEdoCivil);
             this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.DateTime);
+            this.tabPage1.Controls.Add(this.DateTimeFecha);
             this.tabPage1.Controls.Add(this.txtSangre);
             this.tabPage1.Controls.Add(this.txtDomicilio);
             this.tabPage1.Controls.Add(this.txtOcupacion);
@@ -422,12 +422,46 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Datos Generales";
             // 
+            // DataGridPacientes
+            // 
+            this.DataGridPacientes.AllowUserToAddRows = false;
+            this.DataGridPacientes.AllowUserToDeleteRows = false;
+            this.DataGridPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridPacientes.Location = new System.Drawing.Point(26, 346);
+            this.DataGridPacientes.MultiSelect = false;
+            this.DataGridPacientes.Name = "DataGridPacientes";
+            this.DataGridPacientes.ReadOnly = true;
+            this.DataGridPacientes.RowHeadersVisible = false;
+            this.DataGridPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DataGridPacientes.Size = new System.Drawing.Size(919, 196);
+            this.DataGridPacientes.TabIndex = 79;
+            this.DataGridPacientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridPacientes_CellClick);
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(23, 15);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(97, 17);
+            this.label49.TabIndex = 78;
+            this.label49.Text = "Folio paciente:";
+            // 
+            // txtFolio
+            // 
+            this.txtFolio.Location = new System.Drawing.Point(122, 13);
+            this.txtFolio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFolio.Name = "txtFolio";
+            this.txtFolio.ReadOnly = true;
+            this.txtFolio.Size = new System.Drawing.Size(49, 21);
+            this.txtFolio.TabIndex = 77;
+            // 
             // btnBusqueda
             // 
             this.btnBusqueda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBusqueda.BackgroundImage")));
             this.btnBusqueda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnBusqueda.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBusqueda.Location = new System.Drawing.Point(629, 314);
+            this.btnBusqueda.Location = new System.Drawing.Point(629, 299);
             this.btnBusqueda.Margin = new System.Windows.Forms.Padding(2);
             this.btnBusqueda.Name = "btnBusqueda";
             this.btnBusqueda.Size = new System.Drawing.Size(34, 24);
@@ -436,7 +470,7 @@
             // 
             // txtBusqueda
             // 
-            this.txtBusqueda.Location = new System.Drawing.Point(307, 315);
+            this.txtBusqueda.Location = new System.Drawing.Point(307, 300);
             this.txtBusqueda.Margin = new System.Windows.Forms.Padding(2);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(319, 21);
@@ -446,27 +480,19 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(201, 318);
+            this.label14.Location = new System.Drawing.Point(201, 303);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(101, 16);
             this.label14.TabIndex = 74;
             this.label14.Text = "Buscar Paciente: ";
             // 
-            // DataGridDatosG
+            // txtReligion
             // 
-            this.DataGridDatosG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridDatosG.Location = new System.Drawing.Point(14, 346);
-            this.DataGridDatosG.Name = "DataGridDatosG";
-            this.DataGridDatosG.Size = new System.Drawing.Size(903, 283);
-            this.DataGridDatosG.TabIndex = 73;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(325, 252);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(126, 21);
-            this.textBox7.TabIndex = 72;
+            this.txtReligion.Location = new System.Drawing.Point(325, 252);
+            this.txtReligion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtReligion.Name = "txtReligion";
+            this.txtReligion.Size = new System.Drawing.Size(126, 21);
+            this.txtReligion.TabIndex = 72;
             // 
             // label13
             // 
@@ -480,7 +506,7 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(521, 113);
+            this.txtTelefono.Location = new System.Drawing.Point(588, 111);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(142, 21);
@@ -504,17 +530,17 @@
             this.txtEscolaridad.Size = new System.Drawing.Size(126, 21);
             this.txtEscolaridad.TabIndex = 68;
             // 
-            // ComboEscolaridad
+            // cboEdoCivil
             // 
-            this.ComboEscolaridad.FormattingEnabled = true;
-            this.ComboEscolaridad.Items.AddRange(new object[] {
+            this.cboEdoCivil.FormattingEnabled = true;
+            this.cboEdoCivil.Items.AddRange(new object[] {
             "Soltero(a)",
             "Casado(a)",
             "Viudo(a)"});
-            this.ComboEscolaridad.Location = new System.Drawing.Point(102, 249);
-            this.ComboEscolaridad.Name = "ComboEscolaridad";
-            this.ComboEscolaridad.Size = new System.Drawing.Size(126, 24);
-            this.ComboEscolaridad.TabIndex = 67;
+            this.cboEdoCivil.Location = new System.Drawing.Point(102, 249);
+            this.cboEdoCivil.Name = "cboEdoCivil";
+            this.cboEdoCivil.Size = new System.Drawing.Size(126, 24);
+            this.cboEdoCivil.TabIndex = 67;
             // 
             // label9
             // 
@@ -526,12 +552,12 @@
             this.label9.TabIndex = 66;
             this.label9.Text = "Estado Civil: ";
             // 
-            // DateTime
+            // DateTimeFecha
             // 
-            this.DateTime.Location = new System.Drawing.Point(157, 113);
-            this.DateTime.Name = "DateTime";
-            this.DateTime.Size = new System.Drawing.Size(294, 21);
-            this.DateTime.TabIndex = 65;
+            this.DateTimeFecha.Location = new System.Drawing.Point(157, 113);
+            this.DateTimeFecha.Name = "DateTimeFecha";
+            this.DateTimeFecha.Size = new System.Drawing.Size(294, 21);
+            this.DateTimeFecha.TabIndex = 65;
             // 
             // txtSangre
             // 
@@ -560,18 +586,19 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(874, 84);
+            this.btnEliminar.Location = new System.Drawing.Point(588, 239);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(69, 24);
             this.btnEliminar.TabIndex = 57;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(961, 27);
+            this.btnEditar.Location = new System.Drawing.Point(675, 182);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(69, 24);
@@ -583,13 +610,14 @@
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(874, 27);
+            this.btnAgregar.Location = new System.Drawing.Point(588, 182);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(69, 24);
             this.btnAgregar.TabIndex = 55;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // RadioM
             // 
@@ -697,7 +725,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(460, 45);
+            this.label3.Location = new System.Drawing.Point(460, 43);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 17);
             this.label3.TabIndex = 44;
@@ -715,7 +743,7 @@
             // 
             // txtEdad
             // 
-            this.txtEdad.Location = new System.Drawing.Point(506, 43);
+            this.txtEdad.Location = new System.Drawing.Point(588, 43);
             this.txtEdad.Margin = new System.Windows.Forms.Padding(2);
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(49, 21);
@@ -723,10 +751,10 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(87, 43);
+            this.txtNombre.Location = new System.Drawing.Point(102, 43);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(364, 21);
+            this.txtNombre.Size = new System.Drawing.Size(349, 21);
             this.txtNombre.TabIndex = 39;
             // 
             // tabPage2
@@ -3115,24 +3143,6 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(23, 15);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(89, 17);
-            this.label49.TabIndex = 78;
-            this.label49.Text = "No. paciente:";
-            // 
-            // textBox27
-            // 
-            this.textBox27.Location = new System.Drawing.Point(122, 13);
-            this.textBox27.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(49, 21);
-            this.textBox27.TabIndex = 77;
-            // 
             // Pacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3149,7 +3159,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridDatosG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridPacientes)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -3248,15 +3258,14 @@
         private System.Windows.Forms.Button btnBusqueda;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridView DataGridDatosG;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtReligion;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtEscolaridad;
-        private System.Windows.Forms.ComboBox ComboEscolaridad;
+        private System.Windows.Forms.ComboBox cboEdoCivil;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker DateTime;
+        private System.Windows.Forms.DateTimePicker DateTimeFecha;
         private System.Windows.Forms.TextBox txtAlerHijo;
         private System.Windows.Forms.TextBox txtAlerConyu;
         private System.Windows.Forms.TextBox txtAlerMadre;
@@ -3484,6 +3493,7 @@
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.TextBox textBox27;
+        private System.Windows.Forms.TextBox txtFolio;
+        private System.Windows.Forms.DataGridView DataGridPacientes;
     }
 }
