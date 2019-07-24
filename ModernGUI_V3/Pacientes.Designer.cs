@@ -125,7 +125,7 @@
             this.txtDiabConyu = new System.Windows.Forms.TextBox();
             this.txtDiabMadre = new System.Windows.Forms.TextBox();
             this.txtDiabPadre = new System.Windows.Forms.TextBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.ComboTios = new System.Windows.Forms.ComboBox();
             this.ComboAbuelo = new System.Windows.Forms.ComboBox();
             this.ComboHermano = new System.Windows.Forms.ComboBox();
             this.ComboHijo = new System.Windows.Forms.ComboBox();
@@ -347,7 +347,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(1333, 28);
+            this.BarraTitulo.Size = new System.Drawing.Size(1325, 28);
             this.BarraTitulo.TabIndex = 11;
             this.BarraTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseMove);
             // 
@@ -863,7 +863,7 @@
             this.tabPage2.Controls.Add(this.txtDiabConyu);
             this.tabPage2.Controls.Add(this.txtDiabMadre);
             this.tabPage2.Controls.Add(this.txtDiabPadre);
-            this.tabPage2.Controls.Add(this.comboBox8);
+            this.tabPage2.Controls.Add(this.ComboTios);
             this.tabPage2.Controls.Add(this.ComboAbuelo);
             this.tabPage2.Controls.Add(this.ComboHermano);
             this.tabPage2.Controls.Add(this.ComboHijo);
@@ -912,6 +912,7 @@
             this.btnAgregar2.TabIndex = 59;
             this.btnAgregar2.Text = "Agregar";
             this.btnAgregar2.UseVisualStyleBackColor = true;
+            this.btnAgregar2.Click += new System.EventHandler(this.BtnAgregar2_Click);
             // 
             // txtVeneroTios
             // 
@@ -1354,16 +1355,16 @@
             this.txtDiabPadre.Size = new System.Drawing.Size(131, 71);
             this.txtDiabPadre.TabIndex = 16;
             // 
-            // comboBox8
+            // ComboTios
             // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
+            this.ComboTios.FormattingEnabled = true;
+            this.ComboTios.Items.AddRange(new object[] {
             "SI",
             "NO"});
-            this.comboBox8.Location = new System.Drawing.Point(99, 584);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(56, 23);
-            this.comboBox8.TabIndex = 15;
+            this.ComboTios.Location = new System.Drawing.Point(99, 584);
+            this.ComboTios.Name = "ComboTios";
+            this.ComboTios.Size = new System.Drawing.Size(56, 23);
+            this.ComboTios.TabIndex = 15;
             // 
             // ComboAbuelo
             // 
@@ -1440,9 +1441,9 @@
             this.groupBox2.Controls.Add(this.label28);
             this.groupBox2.Controls.Add(this.label29);
             this.groupBox2.Controls.Add(this.label30);
-            this.groupBox2.Location = new System.Drawing.Point(6, 51);
+            this.groupBox2.Location = new System.Drawing.Point(6, 52);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(86, 727);
+            this.groupBox2.Size = new System.Drawing.Size(77, 726);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             // 
@@ -3345,7 +3346,7 @@
         private System.Windows.Forms.TextBox txtDiabConyu;
         private System.Windows.Forms.TextBox txtDiabMadre;
         private System.Windows.Forms.TextBox txtDiabPadre;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox ComboTios;
         private System.Windows.Forms.ComboBox ComboAbuelo;
         private System.Windows.Forms.ComboBox ComboHermano;
         private System.Windows.Forms.ComboBox ComboHijo;

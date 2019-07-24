@@ -20,8 +20,10 @@ namespace ModernGUI_V3
         private DateTime localDate = DateTime.Now;
         private DataSet ds;
         private controladorPacientes obj = new controladorPacientes(Login.config);
+        private controladorAntFamiliares obj2 = new controladorAntFamiliares (Login.config);
         private int folio = 0;
         private string sexo;
+        private int id_antecente;
 
         private void listarPacientes()
         {
@@ -58,6 +60,10 @@ namespace ModernGUI_V3
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            this.agregarPaciente();
+        }
+        public void agregarPaciente()
         {
             if (txtNombre.Text.Trim() == "" || txtEdad.Text.Trim() == "")
             {
@@ -119,7 +125,20 @@ namespace ModernGUI_V3
 
             object[] datosP = { this.folio, txtNombre.Text.Trim(), this.sexo, txtSangre.Text.Trim(), DateTimeFecha.Text.Trim(), txtDomicilio.Text.Trim(), txtOcupacion.Text.Trim(), txtEscolaridad.Text.Trim(), cboEdoCivil.Text.Trim(), txtReligion.Text.Trim(), txtEdad.Text.Trim(), txtLugar.Text.Trim(), txtTelefono.Text.Trim() };
 
-            if (obj.agregarPacienteCtl(datosP))
+
+            obj.agregarPacienteCtl(datosP);
+
+            this.id_antecente = int.Parse(obj2.sigNumeroAntFamiliarCtl().ToString());
+
+            object[] datosAntFam1 = { this.id_antecente, this.folio, "Padre", ComboPadre.Text, txtDiabPadre.Text, txtCardioPadre.Text, txtCancerPadre.Text, txtObesiPadre.Text, txtTubePadre.Text, txtAlerPadre.Text, txtVeneroPadre.Text };
+            object[] datosAntFam2 = { this.id_antecente + 1, this.folio, "Madre", ComboMadre.Text, txtDiabMadre.Text, txtCardioMadre.Text, txtCancerMadre.Text, txtObesiMadre.Text, txtTubeMadre.Text, txtAlerMadre.Text, txtVeneroMadre.Text };
+            object[] datosAntFam3 = { this.id_antecente + 2, this.folio, "Conyuge", ComboConyu.Text, txtDiabConyu.Text, txtCardioPadre.Text, txtCancerConyu.Text, txtObesiConyu.Text, txtTubeConyu.Text, txtAlerConyu.Text, txtVeneroConyu.Text };
+            object[] datosAntFam4 = { this.id_antecente + 3, this.folio, "Hijos", ComboHijo.Text, txtDiabHijos.Text, txtCardioHijo.Text, txtCancerHijos.Text, txtObesiHijos.Text, txtTubeHijo.Text, txtAlerHijo.Text, txtVeneroHijo.Text };
+            object[] datosAntFam5 = { this.id_antecente + 4, this.folio, "Hermanos", ComboHermano.Text, txtDiabHermano.Text, txtCardioHermano.Text, txtCancerHermanos.Text, txtObesiHermano.Text, txtTubeHermano.Text, txtAlerHermano.Text, txtVeneroHermano.Text };
+            object[] datosAntFam6 = { this.id_antecente + 5, this.folio, "Abuelos", ComboAbuelo.Text, txtDiabAbue.Text, txtCardioAbuelos.Text, txtCancerAbuelos.Text, txtObesiAbuelos.Text, txtTubeAbuelos.Text, txtAlerAbuelos.Text, txtVeneroAbuelos.Text };
+            object[] datosAntFam7 = { this.id_antecente + 6, this.folio, "Tios", ComboTios.Text, txtDiabTios.Text, txtCardioTios.Text, txtCancerTios.Text, txtObesiTios.Text, txtTubeTios.Text, txtAlerTios.Text, txtVeneroTios.Text };
+
+            if (obj2.agregarAntFamiliarCtl(datosAntFam1, datosAntFam2, datosAntFam3,datosAntFam4,datosAntFam5,datosAntFam6,datosAntFam7))
             {
                 MessageBox.Show("Usuario guardado con exito!");
                 this.listarPacientes();
@@ -129,7 +148,6 @@ namespace ModernGUI_V3
             else
                 MessageBox.Show("Ocurrio un error inesperado intente de nuevo.");
         }
-
         private void btnEditar_Click(object sender, EventArgs e)
         {
             if (txtNombre.Text.Trim() == "" || txtEdad.Text.Trim() == "")
@@ -308,6 +326,9 @@ namespace ModernGUI_V3
             this.limpiarCampos();
         }
 
-       
+        private void BtnAgregar2_Click(object sender, EventArgs e)
+        {
+            this.agregarPaciente();
+        }
     }
 }

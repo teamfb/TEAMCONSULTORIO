@@ -224,4 +224,29 @@ namespace ModernGUI_V3.Controlador
         }
     }
 
+    public class controladorAntFamiliares: ControlBD
+    {
+        public controladorAntFamiliares(ControlConfig _cfg)  // Constructor que asocia un archivo de configuración que ya
+        {                                            // fue leído. (Para no releer el config.ini innecesariamente)
+            bd = new BDMySQL(_cfg.cadconn);
+        }
+        public bool agregarAntFamiliarCtl(object[] _datos1, object[] _datos2, object[] _datos3, object[] _datos4, object[] _datos5 , object[] _datos6, object[] _datos7)
+        {
+            bd.InsertarRegistro("ant_familiares", _datos1);
+            bd.InsertarRegistro("ant_familiares", _datos2);
+            bd.InsertarRegistro("ant_familiares", _datos3);
+            bd.InsertarRegistro("ant_familiares", _datos4);
+            bd.InsertarRegistro("ant_familiares", _datos5);
+            bd.InsertarRegistro("ant_familiares", _datos6);
+            bd.InsertarRegistro("ant_familiares", _datos7);
+            return true;
+        }
+
+        public int sigNumeroAntFamiliarCtl()
+        {
+            int sgte = Convert.ToInt32(bd.LeerNumerico("SELECT MAX(id_antecedente) FROM ant_familiares;")) + 1;
+            return (sgte);
+        }
+    }
+
 }
