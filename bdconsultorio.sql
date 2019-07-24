@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `ant_familiares` (
   CONSTRAINT `FK_ant_familares_pacientes` FOREIGN KEY (`paciente_id`) REFERENCES `pacientes` (`folio`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla consultorio.ant_familiares: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla consultorio.ant_familiares: ~35 rows (aproximadamente)
 /*!40000 ALTER TABLE `ant_familiares` DISABLE KEYS */;
 INSERT INTO `ant_familiares` (`id_antecedente`, `paciente_id`, `tipo_fami`, `vive`, `diabetes`, `cardiobascular`, `cancer`, `obesidad`, `tuberculosis`, `alergicos`, `veneros`) VALUES
 	(1, 20, 'Padre', 'NO', '1', '', '', '', '', '', '1'),
@@ -48,8 +48,84 @@ INSERT INTO `ant_familiares` (`id_antecedente`, `paciente_id`, `tipo_fami`, `viv
 	(11, 21, 'Hijos', '', '', '', '', '', '', '', ''),
 	(12, 21, 'Hermanos', '', '', '', '', '', '', '', ''),
 	(13, 21, 'Abuelos', '', '', '', '', '', '', '', ''),
-	(14, 21, 'Tios', '', '', '', '', '', '', '', '');
+	(14, 21, 'Tios', '', '', '', '', '', '', '', ''),
+	(15, 22, 'Padre', 'SI', '', '', '', '', '', '', ''),
+	(16, 22, 'Madre', 'NO', '', '', '', '', '', '', ''),
+	(17, 22, 'Conyuge', '', '', '', '', '', '', '', ''),
+	(18, 22, 'Hijos', '', '', '', '', '', '', '', ''),
+	(19, 22, 'Hermanos', '', '', '', '', '', '', '', ''),
+	(20, 22, 'Abuelos', '', '', '', '', '', '', '', ''),
+	(21, 22, 'Tios', '', '', '', '', '', '', '', ''),
+	(22, 23, 'Padre', '', '', '', '', '', '', '', ''),
+	(23, 23, 'Madre', '', '', '', '', '', '', '', ''),
+	(24, 23, 'Conyuge', '', '', '', '', '', '', '', ''),
+	(25, 23, 'Hijos', '', '', '', '', '', '', '', ''),
+	(26, 23, 'Hermanos', '', '', '', '', '', '', '', ''),
+	(27, 23, 'Abuelos', '', '', '', '', '', '', '', ''),
+	(28, 23, 'Tios', '', '', '', '', '', '', '', ''),
+	(29, 24, 'Padre', '', '', '', '', '', '', '', ''),
+	(30, 24, 'Madre', '', '', '', '', '', '', '', ''),
+	(31, 24, 'Conyuge', '', '', '', '', '', '', '', ''),
+	(32, 24, 'Hijos', '', '', '', '', '', '', '', ''),
+	(33, 24, 'Hermanos', '', '', '', '', '', '', '', ''),
+	(34, 24, 'Abuelos', '', '', '', '', '', '', '', ''),
+	(35, 24, 'Tios', '', '', '', '', '', '', '', '');
 /*!40000 ALTER TABLE `ant_familiares` ENABLE KEYS */;
+
+
+-- Volcando estructura para tabla consultorio.ant_no_pato
+CREATE TABLE IF NOT EXISTS `ant_no_pato` (
+  `id_antecedente` bigint(20) NOT NULL,
+  `paciente_id` bigint(20) NOT NULL,
+  `vacunacion` varchar(20) NOT NULL,
+  `higiene` varchar(20) NOT NULL,
+  `alimentacion` varchar(20) NOT NULL,
+  `alcoholismo` varchar(100) NOT NULL,
+  `tabaquismo` varchar(100) NOT NULL,
+  `toxicaminas` varchar(100) NOT NULL,
+  `quirurgicos` varchar(100) NOT NULL,
+  `transfucionales` varchar(100) NOT NULL,
+  `alergicos` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_antecedente`),
+  KEY `FK_ant_no_pato_pacientes` (`paciente_id`),
+  CONSTRAINT `FK_ant_no_pato_pacientes` FOREIGN KEY (`paciente_id`) REFERENCES `pacientes` (`folio`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Volcando datos para la tabla consultorio.ant_no_pato: ~2 rows (aproximadamente)
+/*!40000 ALTER TABLE `ant_no_pato` DISABLE KEYS */;
+INSERT INTO `ant_no_pato` (`id_antecedente`, `paciente_id`, `vacunacion`, `higiene`, `alimentacion`, `alcoholismo`, `tabaquismo`, `toxicaminas`, `quirurgicos`, `transfucionales`, `alergicos`) VALUES
+	(1, 23, 'incompleto', 'Buena', 'Mala', '', '', '', '', '', ''),
+	(2, 24, 'Completo', 'Buena', 'Regular', '', '', '', '', '', '');
+/*!40000 ALTER TABLE `ant_no_pato` ENABLE KEYS */;
+
+
+-- Volcando estructura para tabla consultorio.ant_pato
+CREATE TABLE IF NOT EXISTS `ant_pato` (
+  `id_antecedente` bigint(20) NOT NULL,
+  `paciente_id` bigint(20) NOT NULL,
+  `cardiobasculares` varchar(100) DEFAULT NULL,
+  `endocrinos` varchar(100) DEFAULT NULL,
+  `familiares` varchar(100) DEFAULT NULL,
+  `insu_intra` varchar(2) DEFAULT NULL,
+  `musculo_esc` varchar(100) DEFAULT NULL,
+  `neumologicos` varchar(100) DEFAULT NULL,
+  `neoplasticos` varchar(100) DEFAULT NULL,
+  `musculo_obe` varchar(100) DEFAULT NULL,
+  `pisicritaticos` varchar(100) DEFAULT NULL,
+  `gastroinstestinal` varchar(100) DEFAULT NULL,
+  `hemorragicos` varchar(100) DEFAULT NULL,
+  `veneros` varchar(100) DEFAULT NULL,
+  `hepatabiliares` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id_antecedente`),
+  KEY `FK_ant_pato_pacientes` (`paciente_id`),
+  CONSTRAINT `FK_ant_pato_pacientes` FOREIGN KEY (`paciente_id`) REFERENCES `pacientes` (`folio`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Volcando datos para la tabla consultorio.ant_pato: ~1 rows (aproximadamente)
+/*!40000 ALTER TABLE `ant_pato` DISABLE KEYS */;
+INSERT INTO `ant_pato` (`id_antecedente`, `paciente_id`, `cardiobasculares`, `endocrinos`, `familiares`, `insu_intra`, `musculo_esc`, `neumologicos`, `neoplasticos`, `musculo_obe`, `pisicritaticos`, `gastroinstestinal`, `hemorragicos`, `veneros`, `hepatabiliares`) VALUES
+	(1, 24, '', '', 'Hipertencion', 'Si', '', '', '', '', '', '', '', '', '');
+/*!40000 ALTER TABLE `ant_pato` ENABLE KEYS */;
 
 
 -- Volcando estructura para tabla consultorio.consultas
@@ -91,7 +167,7 @@ CREATE TABLE IF NOT EXISTS `pacientes` (
   PRIMARY KEY (`folio`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla consultorio.pacientes: ~13 rows (aproximadamente)
+-- Volcando datos para la tabla consultorio.pacientes: ~19 rows (aproximadamente)
 /*!40000 ALTER TABLE `pacientes` DISABLE KEYS */;
 INSERT INTO `pacientes` (`folio`, `nombre`, `sexo`, `tipo_sangre`, `fecha_naci`, `domicilio`, `ocupacion`, `escolaridad`, `estado_civil`, `religion`, `edad`, `lugar_naci`, `telefono`) VALUES
 	(1, 'fede enfermito', 'Masculino', 'o+', '2019-07-23', NULL, NULL, 'ingeniebrio', 'solterin', NULL, 23, 'hermosillo', NULL),
@@ -109,7 +185,10 @@ INSERT INTO `pacientes` (`folio`, `nombre`, `sexo`, `tipo_sangre`, `fecha_naci`,
 	(18, 'test para ante dos', 'Femenino', '', '2019-07-24', '', '', '', '', '', 16, '', ''),
 	(19, 'test', 'Femenino', 'o-', '2019-07-21', '', '', '', '', '', 22, 'hermosillo', ''),
 	(20, 'test para ante tres', 'Femenino', '', '2019-07-24', '', '', '', '', '', 16, '', ''),
-	(21, 'test nuevo', 'Masculino', 'A+', '2019-07-22', 'olivos', 'operador', 'secundaria', 'Soltero(a)', 'Catolico', 29, 'obregon', '123553');
+	(21, 'test nuevo', 'Masculino', 'A+', '2019-07-22', 'olivos', 'operador', 'secundaria', 'Soltero(a)', 'Catolico', 29, 'obregon', '123553'),
+	(22, 'test', 'Femenino', 'a-', '2019-07-23', '', '', '', '', '', 29, '', ''),
+	(23, 'test', 'Femenino', 'a-', '2019-07-23', '', '', '', '', '', 29, '', ''),
+	(24, 'test chilo', 'Femenino', '', '2019-07-24', '', '', '', '', '', 1, '', '');
 /*!40000 ALTER TABLE `pacientes` ENABLE KEYS */;
 
 

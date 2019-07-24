@@ -182,7 +182,6 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnAgreg = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btnElimin = new System.Windows.Forms.Button();
             this.txtHepa = new System.Windows.Forms.TextBox();
             this.CheckHepa = new System.Windows.Forms.CheckBox();
             this.txtGas = new System.Windows.Forms.TextBox();
@@ -1939,7 +1938,6 @@
             // 
             this.tabPage4.Controls.Add(this.btnAgreg);
             this.tabPage4.Controls.Add(this.btnEdit);
-            this.tabPage4.Controls.Add(this.btnElimin);
             this.tabPage4.Controls.Add(this.txtHepa);
             this.tabPage4.Controls.Add(this.CheckHepa);
             this.tabPage4.Controls.Add(this.txtGas);
@@ -1980,28 +1978,19 @@
             this.btnAgreg.TabIndex = 67;
             this.btnAgreg.Text = "Agregar";
             this.btnAgreg.UseVisualStyleBackColor = true;
+            this.btnAgreg.Click += new System.EventHandler(this.BtnAgreg_Click);
             // 
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(1077, 288);
+            this.btnEdit.Location = new System.Drawing.Point(1043, 288);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(69, 24);
+            this.btnEdit.Size = new System.Drawing.Size(103, 24);
             this.btnEdit.TabIndex = 68;
-            this.btnEdit.Text = "Editar";
+            this.btnEdit.Text = "Limpiar campos";
             this.btnEdit.UseVisualStyleBackColor = true;
-            // 
-            // btnElimin
-            // 
-            this.btnElimin.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnElimin.Location = new System.Drawing.Point(1077, 334);
-            this.btnElimin.Margin = new System.Windows.Forms.Padding(2);
-            this.btnElimin.Name = "btnElimin";
-            this.btnElimin.Size = new System.Drawing.Size(69, 24);
-            this.btnElimin.TabIndex = 69;
-            this.btnElimin.Text = "Eliminar";
-            this.btnElimin.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // txtHepa
             // 
@@ -3440,7 +3429,6 @@
         private System.Windows.Forms.CheckBox CheckIntra;
         private System.Windows.Forms.Button btnAgreg;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnElimin;
         private System.Windows.Forms.TextBox txtHepa;
         private System.Windows.Forms.CheckBox CheckHepa;
         private System.Windows.Forms.TextBox txtGas;

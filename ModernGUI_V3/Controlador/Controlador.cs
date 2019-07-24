@@ -262,10 +262,27 @@ namespace ModernGUI_V3.Controlador
         }
 
         public bool agregarAntNoPatoCtl(object[] _datos)
-        {
-            //mandar el nombre de la tabla y de los datos de la tabla al metodo al 
+        { 
             return (bd.InsertarRegistro("ant_no_pato", _datos));
         }
     }
 
+    public class controladorAntPatologicos : ControlBD
+    {
+        public controladorAntPatologicos(ControlConfig _cfg)  // Constructor que asocia un archivo de configuración que ya
+        {                                            // fue leído. (Para no releer el config.ini innecesariamente)
+            bd = new BDMySQL(_cfg.cadconn);
+        }
+
+        public int sigNumeroAntPatoCtl()
+        {
+            int sgte = Convert.ToInt32(bd.LeerNumerico("SELECT MAX(id_antecedente) FROM ant_pato;")) + 1;
+            return (sgte);
+        }
+
+        public bool agregarAntPatoCtl(object[] _datos)
+        { 
+            return (bd.InsertarRegistro("ant_pato", _datos));
+        }
+    }
 }

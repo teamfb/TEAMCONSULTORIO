@@ -22,13 +22,17 @@ namespace ModernGUI_V3
         private controladorPacientes obj = new controladorPacientes(Login.config);
         private controladorAntFamiliares obj2 = new controladorAntFamiliares (Login.config);
         private controladorAntNoPatologicos obj3 = new controladorAntNoPatologicos(Login.config);
+        private controladorAntPatologicos obj4 = new controladorAntPatologicos(Login.config);
         private int folio = 0;
         private string sexo;
         private int id_antecente;
         private int id_antecente2;
+        private int id_antecente3;
         private string vacunacion;
         private string higiene;
         private string alimentacion;
+        private string familiares;
+        private string insuficienciaIntra;
 
 
         private void listarPacientes()
@@ -131,9 +135,10 @@ namespace ModernGUI_V3
 
             object[] datosP = { this.folio, txtNombre.Text.Trim(), this.sexo, txtSangre.Text.Trim(), DateTimeFecha.Text.Trim(), txtDomicilio.Text.Trim(), txtOcupacion.Text.Trim(), txtEscolaridad.Text.Trim(), cboEdoCivil.Text.Trim(), txtReligion.Text.Trim(), txtEdad.Text.Trim(), txtLugar.Text.Trim(), txtTelefono.Text.Trim() };
 
-
             obj.agregarPacienteCtl(datosP);
+            //aqui terminar el guardado de la tabla pacientes.
 
+            //aqui comienza la recoleccion de datos para el guardado de la tabla ant_familiares
             this.id_antecente = int.Parse(obj2.sigNumeroAntFamiliarCtl().ToString());
             object[] datosAntFam1 = { this.id_antecente, this.folio, "Padre", ComboPadre.Text, txtDiabPadre.Text, txtCardioPadre.Text, txtCancerPadre.Text, txtObesiPadre.Text, txtTubePadre.Text, txtAlerPadre.Text, txtVeneroPadre.Text };
             object[] datosAntFam2 = { this.id_antecente + 1, this.folio, "Madre", ComboMadre.Text, txtDiabMadre.Text, txtCardioMadre.Text, txtCancerMadre.Text, txtObesiMadre.Text, txtTubeMadre.Text, txtAlerMadre.Text, txtVeneroMadre.Text };
@@ -142,8 +147,9 @@ namespace ModernGUI_V3
             object[] datosAntFam5 = { this.id_antecente + 4, this.folio, "Hermanos", ComboHermano.Text, txtDiabHermano.Text, txtCardioHermano.Text, txtCancerHermanos.Text, txtObesiHermano.Text, txtTubeHermano.Text, txtAlerHermano.Text, txtVeneroHermano.Text };
             object[] datosAntFam6 = { this.id_antecente + 5, this.folio, "Abuelos", ComboAbuelo.Text, txtDiabAbue.Text, txtCardioAbuelos.Text, txtCancerAbuelos.Text, txtObesiAbuelos.Text, txtTubeAbuelos.Text, txtAlerAbuelos.Text, txtVeneroAbuelos.Text };
             object[] datosAntFam7 = { this.id_antecente + 6, this.folio, "Tios", ComboTios.Text, txtDiabTios.Text, txtCardioTios.Text, txtCancerTios.Text, txtObesiTios.Text, txtTubeTios.Text, txtAlerTios.Text, txtVeneroTios.Text };
+            //aqui termina la recoleccion de datos para el guardado de la tabla ant_familiares
 
-
+            //aqui comienza la recoleccion de datos para el guardado de la tabla ant_no_pato
             if (RadioCompleto.Checked)
                 this.vacunacion = "Completo";
             else
@@ -164,11 +170,30 @@ namespace ModernGUI_V3
             if (RadioMal.Checked)
                 this.alimentacion = "Mala";
 
-
             this.id_antecente2 = int.Parse(obj3.sigNumeroAntNoPatoCtl().ToString());
-            object[] datosAntNoPato = { this.id_antecente2, this.folio, this.vacunacion, this.higiene, this.alimentacion, txtAlco.Text, txtTaba.Text, txtTaxo.Text,txtQuir.Text, txtTran.Text, txtAle.Text };
 
-            if (obj2.agregarAntFamiliarCtl(datosAntFam1, datosAntFam2, datosAntFam3,datosAntFam4,datosAntFam5,datosAntFam6,datosAntFam7) && obj3.agregarAntNoPatoCtl(datosAntNoPato))
+            object[] datosAntNoPato = { this.id_antecente2, this.folio, this.vacunacion, this.higiene, this.alimentacion, txtAlco.Text, txtTaba.Text, txtTaxo.Text,txtQuir.Text, txtTran.Text, txtAle.Text };
+            //aqui termina la recoleccion de datos para el guardado de la tabla ant_no_pato
+
+            //aqui comienza la recoleccion de datos para el guardado de la tabla ant_pato
+            if (CheckHipe.Checked)
+                this.familiares = "Hipertencion";
+            if (CheckHipe.Checked && CheckDia.Checked)
+                this.familiares = "Hipertencion y Diabetes mellitus";
+            if (CheckHipe.Checked && CheckDia.Checked && CheckInsu.Checked)
+                this.familiares = "Hipertencion, insuficiencia intravenosa y Diabetes mellitus";
+
+            if (CheckIntra.Checked)
+                this.insuficienciaIntra = "Si";
+            else
+                this.insuficienciaIntra = "No";
+
+            this.id_antecente3 = int.Parse(obj4.sigNumeroAntPatoCtl().ToString());
+
+            object[] datosAntPato = { this.id_antecente3, this.folio, txtCardio.Text, txtEndo.Text, this.familiares, this.insuficienciaIntra, txtMusc.Text, txtNeu.Text, txtNeo.Text, txtMusObes.Text, txtPsi.Text, txtGas.Text, txtHema.Text, txtVene.Text, txtHepa.Text };
+            //aqui termina la recoleccion de datos para el guardado de la tabla ant_pato
+
+            if (obj2.agregarAntFamiliarCtl(datosAntFam1, datosAntFam2, datosAntFam3,datosAntFam4,datosAntFam5,datosAntFam6,datosAntFam7) && obj3.agregarAntNoPatoCtl(datosAntNoPato) && obj4.agregarAntPatoCtl(datosAntPato))
             {
                 MessageBox.Show("Usuario guardado con exito!");
                 this.listarPacientes();
@@ -359,6 +384,16 @@ namespace ModernGUI_V3
         private void BtnAgregar2_Click(object sender, EventArgs e)
         {
             this.agregarPaciente();
+        }
+
+        private void BtnAgreg_Click(object sender, EventArgs e)
+        {
+            this.agregarPaciente();
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            this.limpiarCampos();
         }
     }
 }
