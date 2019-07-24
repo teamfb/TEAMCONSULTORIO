@@ -10,7 +10,8 @@ namespace ModernGUI_V3.Controlador
     public class Validaciones
     {
         public static bool soloLetras(string _cad)
-        {   //Regex regex = new Regex(@"^[^ ][a-zA-Z ]+[^ ]$");
+        { 
+            //Regex regex = new Regex(@"^[^ ][a-zA-Z ]+[^ ]$");
             Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$");
             return regex.IsMatch(_cad);
         }

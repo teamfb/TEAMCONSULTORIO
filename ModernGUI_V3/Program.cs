@@ -16,7 +16,7 @@ namespace ModernGUI_V3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Pacientes());
+            Application.Run(new Login());
         }
     }
 }

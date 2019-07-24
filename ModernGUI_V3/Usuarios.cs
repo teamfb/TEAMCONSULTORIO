@@ -23,8 +23,7 @@ namespace ModernGUI_V3
         private DataSet ds;
         private controladorUsuarios obj = new controladorUsuarios(Login.config);
         private string usuario = "";
-   
-
+  
         private void BarraTitulo_MouseMove(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -43,7 +42,6 @@ namespace ModernGUI_V3
             this.WindowState = FormWindowState.Minimized;
         }
 
-       
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
@@ -53,15 +51,11 @@ namespace ModernGUI_V3
             }
         }
 
-        private void Usuarios_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
         private void listarUsuarios()
         {
             if (txtBusqueda.Text.Trim() == "")
@@ -123,15 +117,11 @@ namespace ModernGUI_V3
             }
         }
 
-        private void ComboTipo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
             listarUsuarios();
         }
+
         private void limpiarCampos()
         {
             this.usuario = "";
@@ -170,7 +160,7 @@ namespace ModernGUI_V3
 
             string error = "";
 
-            if (obj.modificarUsuarioCtl("usuarios", campos, datosB, "usuario", usuario, ref error))
+            if (obj.modificarUsuarioCtl("usuarios", campos, datosB, "usuario", this.usuario, ref error))
             {
                 MessageBox.Show("Los datos del usaurios han sido modificados con exito!");
                 this.listarUsuarios();
@@ -294,11 +284,6 @@ namespace ModernGUI_V3
             this.limpiarCampos();
         }
 
-        private void txtContraseña_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnLimpiar2_Click(object sender, EventArgs e)
         {
             this.limpiarCampos();
@@ -400,6 +385,11 @@ namespace ModernGUI_V3
 
                 return;
             }
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -44,6 +44,7 @@ namespace ModernGUI_V3.Controlador
         {                                            // fue leído. (Para no releer el config.ini innecesariamente)
             bd = new BDMySQL(_cfg.cadconn);
         }
+
         private string obtieneMD5(string _txt)
         {
             MD5 md5 = MD5.Create();
@@ -109,6 +110,7 @@ namespace ModernGUI_V3.Controlador
             iSql = "SELECT usuario, nombres, apellidos,  tipo FROM usuarios WHERE usuario LIKE ('" + _dato_a_buscar + "%') ORDER BY nombres ASC";
             return (bd.LeerRegistros(iSql));
         }
+
         public bool agregarUsuarioCtl(object[] _datos, ref string _error)
         {
             //mandar el nombre de la tabla y de los datos de la tabla al metodo al modelo
@@ -195,20 +197,25 @@ namespace ModernGUI_V3.Controlador
 
         public DataSet listarPacientesCtl()
         {
-            iSql = "SELECT * FROM pacientes ORDER BY nombre ASC";
+            iSql = "SELECT * FROM pacientes ORDER BY folio ASC";
             return (bd.LeerRegistros(iSql));
         }
 
         public DataSet listarPacientes2Ctl(string _dato_a_buscar)
         {
-            iSql = "SELECT * FROM pacientes WHERE nombre LIKE ('" + _dato_a_buscar + "%') ORDER BY nombres ASC";
+            iSql = "SELECT * FROM pacientes WHERE nombre LIKE ('" + _dato_a_buscar + "%') ORDER BY folio ASC";
             return (bd.LeerRegistros(iSql));
         }
 
-        public bool agregarConsultaCtl(object[] _datos)
+        public bool agregarPacienteCtl(object[] _datos)
         {
             //mandar el nombre de la tabla y de los datos de la tabla al metodo al 
             return (bd.InsertarRegistro("pacientes", _datos));
+        }
+
+        public bool modificarPacienteCtl(string _tbl, string[] _campos, object[] _datos, string _key, object _valorkey)
+        {
+            return (bd.ModificarRegistro(_tbl, _campos, _datos, _key, _valorkey));
         }
 
         public bool eliminarPacienteCtl(int _clave, ref string _error)

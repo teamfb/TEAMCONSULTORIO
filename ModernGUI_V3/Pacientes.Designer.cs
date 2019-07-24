@@ -34,6 +34,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label50 = new System.Windows.Forms.Label();
+            this.txtFolioSelec = new System.Windows.Forms.TextBox();
             this.DataGridPacientes = new System.Windows.Forms.DataGridView();
             this.label49 = new System.Windows.Forms.Label();
             this.txtFolio = new System.Windows.Forms.TextBox();
@@ -69,9 +73,9 @@
             this.txtEdad = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnAgregar2 = new System.Windows.Forms.Button();
             this.txtVeneroTios = new System.Windows.Forms.TextBox();
             this.txtVeneroAbuelos = new System.Windows.Forms.TextBox();
             this.txtVeneroHermano = new System.Windows.Forms.TextBox();
@@ -343,7 +347,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(1325, 28);
+            this.BarraTitulo.Size = new System.Drawing.Size(1333, 28);
             this.BarraTitulo.TabIndex = 11;
             this.BarraTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseMove);
             // 
@@ -379,6 +383,10 @@
             // 
             this.tabPage1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.label50);
+            this.tabPage1.Controls.Add(this.txtFolioSelec);
             this.tabPage1.Controls.Add(this.DataGridPacientes);
             this.tabPage1.Controls.Add(this.label49);
             this.tabPage1.Controls.Add(this.txtFolio);
@@ -422,6 +430,49 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Datos Generales";
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(588, 252);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(156, 24);
+            this.button2.TabIndex = 83;
+            this.button2.Text = "Limpiar campos";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(675, 213);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(69, 24);
+            this.button1.TabIndex = 82;
+            this.button1.Text = "Cerrar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Location = new System.Drawing.Point(213, 15);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(182, 17);
+            this.label50.TabIndex = 81;
+            this.label50.Text = "Folio paciente seleccionado:";
+            // 
+            // txtFolioSelec
+            // 
+            this.txtFolioSelec.Location = new System.Drawing.Point(413, 13);
+            this.txtFolioSelec.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFolioSelec.Name = "txtFolioSelec";
+            this.txtFolioSelec.ReadOnly = true;
+            this.txtFolioSelec.Size = new System.Drawing.Size(88, 21);
+            this.txtFolioSelec.TabIndex = 80;
+            // 
             // DataGridPacientes
             // 
             this.DataGridPacientes.AllowUserToAddRows = false;
@@ -443,9 +494,9 @@
             this.label49.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label49.Location = new System.Drawing.Point(23, 15);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(97, 17);
+            this.label49.Size = new System.Drawing.Size(98, 17);
             this.label49.TabIndex = 78;
-            this.label49.Text = "Folio paciente:";
+            this.label49.Text = "Siguiente Folio:";
             // 
             // txtFolio
             // 
@@ -453,7 +504,7 @@
             this.txtFolio.Margin = new System.Windows.Forms.Padding(2);
             this.txtFolio.Name = "txtFolio";
             this.txtFolio.ReadOnly = true;
-            this.txtFolio.Size = new System.Drawing.Size(49, 21);
+            this.txtFolio.Size = new System.Drawing.Size(86, 21);
             this.txtFolio.TabIndex = 77;
             // 
             // btnBusqueda
@@ -475,6 +526,7 @@
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(319, 21);
             this.txtBusqueda.TabIndex = 75;
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.TxtBusqueda_TextChanged);
             // 
             // label14
             // 
@@ -586,7 +638,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(588, 239);
+            this.btnEliminar.Location = new System.Drawing.Point(588, 213);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(69, 24);
@@ -759,9 +811,9 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.button6);
-            this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Controls.Add(this.button4);
+            this.tabPage2.Controls.Add(this.button7);
+            this.tabPage2.Controls.Add(this.button3);
+            this.tabPage2.Controls.Add(this.btnAgregar2);
             this.tabPage2.Controls.Add(this.txtVeneroTios);
             this.tabPage2.Controls.Add(this.txtVeneroAbuelos);
             this.tabPage2.Controls.Add(this.txtVeneroHermano);
@@ -828,42 +880,42 @@
             this.tabPage2.Text = "Ant. Familiares";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // button7
             // 
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(1206, 87);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(69, 24);
-            this.button6.TabIndex = 59;
-            this.button6.Text = "Agregar";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(1206, 201);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(69, 24);
+            this.button7.TabIndex = 66;
+            this.button7.Text = "Cerrar";
+            this.button7.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // button3
             // 
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(1206, 137);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(69, 24);
-            this.button5.TabIndex = 60;
-            this.button5.Text = "Editar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(1206, 131);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(69, 51);
+            this.button3.TabIndex = 65;
+            this.button3.Text = "Limpiar Campos";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnAgregar2
             // 
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(1206, 183);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(69, 24);
-            this.button4.TabIndex = 61;
-            this.button4.Text = "Eliminar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnAgregar2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar2.Location = new System.Drawing.Point(1206, 87);
+            this.btnAgregar2.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregar2.Name = "btnAgregar2";
+            this.btnAgregar2.Size = new System.Drawing.Size(69, 24);
+            this.btnAgregar2.TabIndex = 59;
+            this.btnAgregar2.Text = "Agregar";
+            this.btnAgregar2.UseVisualStyleBackColor = true;
             // 
             // txtVeneroTios
             // 
-            this.txtVeneroTios.Location = new System.Drawing.Point(1058, 703);
+            this.txtVeneroTios.Location = new System.Drawing.Point(1055, 584);
             this.txtVeneroTios.Multiline = true;
             this.txtVeneroTios.Name = "txtVeneroTios";
             this.txtVeneroTios.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -872,7 +924,7 @@
             // 
             // txtVeneroAbuelos
             // 
-            this.txtVeneroAbuelos.Location = new System.Drawing.Point(1058, 595);
+            this.txtVeneroAbuelos.Location = new System.Drawing.Point(1055, 494);
             this.txtVeneroAbuelos.Multiline = true;
             this.txtVeneroAbuelos.Name = "txtVeneroAbuelos";
             this.txtVeneroAbuelos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -881,7 +933,7 @@
             // 
             // txtVeneroHermano
             // 
-            this.txtVeneroHermano.Location = new System.Drawing.Point(1058, 494);
+            this.txtVeneroHermano.Location = new System.Drawing.Point(1055, 406);
             this.txtVeneroHermano.Multiline = true;
             this.txtVeneroHermano.Name = "txtVeneroHermano";
             this.txtVeneroHermano.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -890,7 +942,7 @@
             // 
             // txtAlerTios
             // 
-            this.txtAlerTios.Location = new System.Drawing.Point(906, 700);
+            this.txtAlerTios.Location = new System.Drawing.Point(906, 584);
             this.txtAlerTios.Multiline = true;
             this.txtAlerTios.Name = "txtAlerTios";
             this.txtAlerTios.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -899,7 +951,7 @@
             // 
             // txtAlerAbuelos
             // 
-            this.txtAlerAbuelos.Location = new System.Drawing.Point(906, 592);
+            this.txtAlerAbuelos.Location = new System.Drawing.Point(906, 494);
             this.txtAlerAbuelos.Multiline = true;
             this.txtAlerAbuelos.Name = "txtAlerAbuelos";
             this.txtAlerAbuelos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -908,7 +960,7 @@
             // 
             // txtAlerHermano
             // 
-            this.txtAlerHermano.Location = new System.Drawing.Point(906, 491);
+            this.txtAlerHermano.Location = new System.Drawing.Point(906, 406);
             this.txtAlerHermano.Multiline = true;
             this.txtAlerHermano.Name = "txtAlerHermano";
             this.txtAlerHermano.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -917,7 +969,7 @@
             // 
             // txtTubeTios
             // 
-            this.txtTubeTios.Location = new System.Drawing.Point(759, 700);
+            this.txtTubeTios.Location = new System.Drawing.Point(759, 584);
             this.txtTubeTios.Multiline = true;
             this.txtTubeTios.Name = "txtTubeTios";
             this.txtTubeTios.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -926,7 +978,7 @@
             // 
             // txtTubeAbuelos
             // 
-            this.txtTubeAbuelos.Location = new System.Drawing.Point(759, 592);
+            this.txtTubeAbuelos.Location = new System.Drawing.Point(759, 494);
             this.txtTubeAbuelos.Multiline = true;
             this.txtTubeAbuelos.Name = "txtTubeAbuelos";
             this.txtTubeAbuelos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -935,7 +987,7 @@
             // 
             // txtTubeHermano
             // 
-            this.txtTubeHermano.Location = new System.Drawing.Point(759, 491);
+            this.txtTubeHermano.Location = new System.Drawing.Point(759, 406);
             this.txtTubeHermano.Multiline = true;
             this.txtTubeHermano.Name = "txtTubeHermano";
             this.txtTubeHermano.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -944,7 +996,7 @@
             // 
             // txtObesiTios
             // 
-            this.txtObesiTios.Location = new System.Drawing.Point(612, 700);
+            this.txtObesiTios.Location = new System.Drawing.Point(612, 584);
             this.txtObesiTios.Multiline = true;
             this.txtObesiTios.Name = "txtObesiTios";
             this.txtObesiTios.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -953,7 +1005,7 @@
             // 
             // txtObesiAbuelos
             // 
-            this.txtObesiAbuelos.Location = new System.Drawing.Point(612, 592);
+            this.txtObesiAbuelos.Location = new System.Drawing.Point(612, 494);
             this.txtObesiAbuelos.Multiline = true;
             this.txtObesiAbuelos.Name = "txtObesiAbuelos";
             this.txtObesiAbuelos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -962,7 +1014,7 @@
             // 
             // txtObesiHermano
             // 
-            this.txtObesiHermano.Location = new System.Drawing.Point(612, 491);
+            this.txtObesiHermano.Location = new System.Drawing.Point(612, 406);
             this.txtObesiHermano.Multiline = true;
             this.txtObesiHermano.Name = "txtObesiHermano";
             this.txtObesiHermano.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -971,7 +1023,7 @@
             // 
             // txtCancerTios
             // 
-            this.txtCancerTios.Location = new System.Drawing.Point(466, 702);
+            this.txtCancerTios.Location = new System.Drawing.Point(466, 584);
             this.txtCancerTios.Multiline = true;
             this.txtCancerTios.Name = "txtCancerTios";
             this.txtCancerTios.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -980,7 +1032,7 @@
             // 
             // txtCancerAbuelos
             // 
-            this.txtCancerAbuelos.Location = new System.Drawing.Point(466, 594);
+            this.txtCancerAbuelos.Location = new System.Drawing.Point(466, 494);
             this.txtCancerAbuelos.Multiline = true;
             this.txtCancerAbuelos.Name = "txtCancerAbuelos";
             this.txtCancerAbuelos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -989,7 +1041,7 @@
             // 
             // txtCancerHermanos
             // 
-            this.txtCancerHermanos.Location = new System.Drawing.Point(466, 493);
+            this.txtCancerHermanos.Location = new System.Drawing.Point(466, 406);
             this.txtCancerHermanos.Multiline = true;
             this.txtCancerHermanos.Name = "txtCancerHermanos";
             this.txtCancerHermanos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -998,7 +1050,7 @@
             // 
             // txtCardioTios
             // 
-            this.txtCardioTios.Location = new System.Drawing.Point(320, 700);
+            this.txtCardioTios.Location = new System.Drawing.Point(320, 584);
             this.txtCardioTios.Multiline = true;
             this.txtCardioTios.Name = "txtCardioTios";
             this.txtCardioTios.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1007,7 +1059,7 @@
             // 
             // txtCardioAbuelos
             // 
-            this.txtCardioAbuelos.Location = new System.Drawing.Point(320, 592);
+            this.txtCardioAbuelos.Location = new System.Drawing.Point(320, 494);
             this.txtCardioAbuelos.Multiline = true;
             this.txtCardioAbuelos.Name = "txtCardioAbuelos";
             this.txtCardioAbuelos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1016,7 +1068,7 @@
             // 
             // txtCardioHermano
             // 
-            this.txtCardioHermano.Location = new System.Drawing.Point(320, 491);
+            this.txtCardioHermano.Location = new System.Drawing.Point(320, 406);
             this.txtCardioHermano.Multiline = true;
             this.txtCardioHermano.Name = "txtCardioHermano";
             this.txtCardioHermano.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1025,7 +1077,7 @@
             // 
             // txtVeneroHijo
             // 
-            this.txtVeneroHijo.Location = new System.Drawing.Point(1058, 386);
+            this.txtVeneroHijo.Location = new System.Drawing.Point(1055, 318);
             this.txtVeneroHijo.Multiline = true;
             this.txtVeneroHijo.Name = "txtVeneroHijo";
             this.txtVeneroHijo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1034,7 +1086,7 @@
             // 
             // txtVeneroConyu
             // 
-            this.txtVeneroConyu.Location = new System.Drawing.Point(1058, 287);
+            this.txtVeneroConyu.Location = new System.Drawing.Point(1055, 237);
             this.txtVeneroConyu.Multiline = true;
             this.txtVeneroConyu.Name = "txtVeneroConyu";
             this.txtVeneroConyu.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1043,7 +1095,7 @@
             // 
             // txtVeneroMadre
             // 
-            this.txtVeneroMadre.Location = new System.Drawing.Point(1058, 180);
+            this.txtVeneroMadre.Location = new System.Drawing.Point(1055, 156);
             this.txtVeneroMadre.Multiline = true;
             this.txtVeneroMadre.Name = "txtVeneroMadre";
             this.txtVeneroMadre.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1052,7 +1104,7 @@
             // 
             // txtVeneroPadre
             // 
-            this.txtVeneroPadre.Location = new System.Drawing.Point(1058, 79);
+            this.txtVeneroPadre.Location = new System.Drawing.Point(1055, 79);
             this.txtVeneroPadre.Multiline = true;
             this.txtVeneroPadre.Name = "txtVeneroPadre";
             this.txtVeneroPadre.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1061,7 +1113,7 @@
             // 
             // txtAlerHijo
             // 
-            this.txtAlerHijo.Location = new System.Drawing.Point(906, 386);
+            this.txtAlerHijo.Location = new System.Drawing.Point(906, 318);
             this.txtAlerHijo.Multiline = true;
             this.txtAlerHijo.Name = "txtAlerHijo";
             this.txtAlerHijo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1070,7 +1122,7 @@
             // 
             // txtAlerConyu
             // 
-            this.txtAlerConyu.Location = new System.Drawing.Point(906, 287);
+            this.txtAlerConyu.Location = new System.Drawing.Point(906, 237);
             this.txtAlerConyu.Multiline = true;
             this.txtAlerConyu.Name = "txtAlerConyu";
             this.txtAlerConyu.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1079,7 +1131,7 @@
             // 
             // txtAlerMadre
             // 
-            this.txtAlerMadre.Location = new System.Drawing.Point(906, 180);
+            this.txtAlerMadre.Location = new System.Drawing.Point(906, 156);
             this.txtAlerMadre.Multiline = true;
             this.txtAlerMadre.Name = "txtAlerMadre";
             this.txtAlerMadre.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1097,7 +1149,7 @@
             // 
             // txtTubeHijo
             // 
-            this.txtTubeHijo.Location = new System.Drawing.Point(759, 386);
+            this.txtTubeHijo.Location = new System.Drawing.Point(759, 318);
             this.txtTubeHijo.Multiline = true;
             this.txtTubeHijo.Name = "txtTubeHijo";
             this.txtTubeHijo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1106,7 +1158,7 @@
             // 
             // txtTubeConyu
             // 
-            this.txtTubeConyu.Location = new System.Drawing.Point(759, 287);
+            this.txtTubeConyu.Location = new System.Drawing.Point(759, 237);
             this.txtTubeConyu.Multiline = true;
             this.txtTubeConyu.Name = "txtTubeConyu";
             this.txtTubeConyu.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1115,7 +1167,7 @@
             // 
             // txtTubeMadre
             // 
-            this.txtTubeMadre.Location = new System.Drawing.Point(759, 180);
+            this.txtTubeMadre.Location = new System.Drawing.Point(759, 156);
             this.txtTubeMadre.Multiline = true;
             this.txtTubeMadre.Name = "txtTubeMadre";
             this.txtTubeMadre.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1133,7 +1185,7 @@
             // 
             // txtObesiHijos
             // 
-            this.txtObesiHijos.Location = new System.Drawing.Point(612, 386);
+            this.txtObesiHijos.Location = new System.Drawing.Point(612, 318);
             this.txtObesiHijos.Multiline = true;
             this.txtObesiHijos.Name = "txtObesiHijos";
             this.txtObesiHijos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1142,7 +1194,7 @@
             // 
             // txtObesiConyu
             // 
-            this.txtObesiConyu.Location = new System.Drawing.Point(612, 287);
+            this.txtObesiConyu.Location = new System.Drawing.Point(612, 237);
             this.txtObesiConyu.Multiline = true;
             this.txtObesiConyu.Name = "txtObesiConyu";
             this.txtObesiConyu.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1151,7 +1203,7 @@
             // 
             // txtObesiMadre
             // 
-            this.txtObesiMadre.Location = new System.Drawing.Point(612, 180);
+            this.txtObesiMadre.Location = new System.Drawing.Point(612, 156);
             this.txtObesiMadre.Multiline = true;
             this.txtObesiMadre.Name = "txtObesiMadre";
             this.txtObesiMadre.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1169,7 +1221,7 @@
             // 
             // txtCancerHijos
             // 
-            this.txtCancerHijos.Location = new System.Drawing.Point(466, 386);
+            this.txtCancerHijos.Location = new System.Drawing.Point(466, 318);
             this.txtCancerHijos.Multiline = true;
             this.txtCancerHijos.Name = "txtCancerHijos";
             this.txtCancerHijos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1178,7 +1230,7 @@
             // 
             // txtCancerConyu
             // 
-            this.txtCancerConyu.Location = new System.Drawing.Point(466, 287);
+            this.txtCancerConyu.Location = new System.Drawing.Point(466, 237);
             this.txtCancerConyu.Multiline = true;
             this.txtCancerConyu.Name = "txtCancerConyu";
             this.txtCancerConyu.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1187,7 +1239,7 @@
             // 
             // txtCancerMadre
             // 
-            this.txtCancerMadre.Location = new System.Drawing.Point(466, 180);
+            this.txtCancerMadre.Location = new System.Drawing.Point(466, 156);
             this.txtCancerMadre.Multiline = true;
             this.txtCancerMadre.Name = "txtCancerMadre";
             this.txtCancerMadre.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1205,7 +1257,7 @@
             // 
             // txtCardioHijo
             // 
-            this.txtCardioHijo.Location = new System.Drawing.Point(320, 386);
+            this.txtCardioHijo.Location = new System.Drawing.Point(320, 318);
             this.txtCardioHijo.Multiline = true;
             this.txtCardioHijo.Name = "txtCardioHijo";
             this.txtCardioHijo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1214,7 +1266,7 @@
             // 
             // txtCardioConyu
             // 
-            this.txtCardioConyu.Location = new System.Drawing.Point(320, 287);
+            this.txtCardioConyu.Location = new System.Drawing.Point(320, 237);
             this.txtCardioConyu.Multiline = true;
             this.txtCardioConyu.Name = "txtCardioConyu";
             this.txtCardioConyu.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1223,7 +1275,7 @@
             // 
             // txtCardioMadre
             // 
-            this.txtCardioMadre.Location = new System.Drawing.Point(320, 180);
+            this.txtCardioMadre.Location = new System.Drawing.Point(320, 156);
             this.txtCardioMadre.Multiline = true;
             this.txtCardioMadre.Name = "txtCardioMadre";
             this.txtCardioMadre.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1241,7 +1293,7 @@
             // 
             // txtDiabTios
             // 
-            this.txtDiabTios.Location = new System.Drawing.Point(173, 702);
+            this.txtDiabTios.Location = new System.Drawing.Point(173, 584);
             this.txtDiabTios.Multiline = true;
             this.txtDiabTios.Name = "txtDiabTios";
             this.txtDiabTios.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1250,7 +1302,7 @@
             // 
             // txtDiabAbue
             // 
-            this.txtDiabAbue.Location = new System.Drawing.Point(173, 594);
+            this.txtDiabAbue.Location = new System.Drawing.Point(173, 494);
             this.txtDiabAbue.Multiline = true;
             this.txtDiabAbue.Name = "txtDiabAbue";
             this.txtDiabAbue.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1259,7 +1311,7 @@
             // 
             // txtDiabHermano
             // 
-            this.txtDiabHermano.Location = new System.Drawing.Point(173, 493);
+            this.txtDiabHermano.Location = new System.Drawing.Point(173, 406);
             this.txtDiabHermano.Multiline = true;
             this.txtDiabHermano.Name = "txtDiabHermano";
             this.txtDiabHermano.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1268,7 +1320,7 @@
             // 
             // txtDiabHijos
             // 
-            this.txtDiabHijos.Location = new System.Drawing.Point(173, 386);
+            this.txtDiabHijos.Location = new System.Drawing.Point(173, 318);
             this.txtDiabHijos.Multiline = true;
             this.txtDiabHijos.Name = "txtDiabHijos";
             this.txtDiabHijos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1277,7 +1329,7 @@
             // 
             // txtDiabConyu
             // 
-            this.txtDiabConyu.Location = new System.Drawing.Point(173, 287);
+            this.txtDiabConyu.Location = new System.Drawing.Point(173, 237);
             this.txtDiabConyu.Multiline = true;
             this.txtDiabConyu.Name = "txtDiabConyu";
             this.txtDiabConyu.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1286,7 +1338,7 @@
             // 
             // txtDiabMadre
             // 
-            this.txtDiabMadre.Location = new System.Drawing.Point(173, 180);
+            this.txtDiabMadre.Location = new System.Drawing.Point(173, 156);
             this.txtDiabMadre.Multiline = true;
             this.txtDiabMadre.Name = "txtDiabMadre";
             this.txtDiabMadre.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1308,7 +1360,7 @@
             this.comboBox8.Items.AddRange(new object[] {
             "SI",
             "NO"});
-            this.comboBox8.Location = new System.Drawing.Point(98, 705);
+            this.comboBox8.Location = new System.Drawing.Point(99, 584);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(56, 23);
             this.comboBox8.TabIndex = 15;
@@ -1319,7 +1371,7 @@
             this.ComboAbuelo.Items.AddRange(new object[] {
             "SI",
             "NO"});
-            this.ComboAbuelo.Location = new System.Drawing.Point(98, 595);
+            this.ComboAbuelo.Location = new System.Drawing.Point(98, 494);
             this.ComboAbuelo.Name = "ComboAbuelo";
             this.ComboAbuelo.Size = new System.Drawing.Size(56, 23);
             this.ComboAbuelo.TabIndex = 14;
@@ -1330,7 +1382,7 @@
             this.ComboHermano.Items.AddRange(new object[] {
             "SI",
             "NO"});
-            this.ComboHermano.Location = new System.Drawing.Point(99, 491);
+            this.ComboHermano.Location = new System.Drawing.Point(99, 406);
             this.ComboHermano.Name = "ComboHermano";
             this.ComboHermano.Size = new System.Drawing.Size(56, 23);
             this.ComboHermano.TabIndex = 13;
@@ -1341,7 +1393,7 @@
             this.ComboHijo.Items.AddRange(new object[] {
             "SI",
             "NO"});
-            this.ComboHijo.Location = new System.Drawing.Point(99, 387);
+            this.ComboHijo.Location = new System.Drawing.Point(99, 318);
             this.ComboHijo.Name = "ComboHijo";
             this.ComboHijo.Size = new System.Drawing.Size(56, 23);
             this.ComboHijo.TabIndex = 12;
@@ -1352,7 +1404,7 @@
             this.ComboConyu.Items.AddRange(new object[] {
             "SI",
             "NO"});
-            this.ComboConyu.Location = new System.Drawing.Point(99, 287);
+            this.ComboConyu.Location = new System.Drawing.Point(98, 237);
             this.ComboConyu.Name = "ComboConyu";
             this.ComboConyu.Size = new System.Drawing.Size(56, 23);
             this.ComboConyu.TabIndex = 11;
@@ -1363,7 +1415,7 @@
             this.ComboMadre.Items.AddRange(new object[] {
             "SI",
             "NO"});
-            this.ComboMadre.Location = new System.Drawing.Point(99, 183);
+            this.ComboMadre.Location = new System.Drawing.Point(99, 156);
             this.ComboMadre.Name = "ComboMadre";
             this.ComboMadre.Size = new System.Drawing.Size(56, 23);
             this.ComboMadre.TabIndex = 10;
@@ -1397,7 +1449,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(23, 654);
+            this.label24.Location = new System.Drawing.Point(29, 531);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(27, 15);
             this.label24.TabIndex = 6;
@@ -1406,7 +1458,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(17, 544);
+            this.label25.Location = new System.Drawing.Point(17, 443);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(51, 15);
             this.label25.TabIndex = 5;
@@ -1415,7 +1467,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(12, 440);
+            this.label26.Location = new System.Drawing.Point(12, 355);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(61, 15);
             this.label26.TabIndex = 4;
@@ -1424,7 +1476,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(23, 336);
+            this.label27.Location = new System.Drawing.Point(23, 267);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(33, 15);
             this.label27.TabIndex = 3;
@@ -1433,7 +1485,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(17, 239);
+            this.label28.Location = new System.Drawing.Point(12, 186);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(56, 15);
             this.label28.TabIndex = 2;
@@ -1442,7 +1494,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(19, 132);
+            this.label29.Location = new System.Drawing.Point(17, 105);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(42, 15);
             this.label29.TabIndex = 1;
@@ -1451,7 +1503,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(17, 36);
+            this.label30.Location = new System.Drawing.Point(17, 32);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(39, 15);
             this.label30.TabIndex = 0;
@@ -1470,7 +1522,7 @@
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Location = new System.Drawing.Point(89, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1100, 55);
+            this.groupBox1.Size = new System.Drawing.Size(1097, 55);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
@@ -3340,9 +3392,7 @@
         private System.Windows.Forms.TextBox txtVeneroConyu;
         private System.Windows.Forms.TextBox txtVeneroMadre;
         private System.Windows.Forms.TextBox txtVeneroPadre;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnAgregar2;
         private System.Windows.Forms.GroupBox GroupFamiliares;
         private System.Windows.Forms.GroupBox GroupAlimentacion;
         private System.Windows.Forms.GroupBox GroupHigiene;
@@ -3495,5 +3545,11 @@
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.TextBox txtFolio;
         private System.Windows.Forms.DataGridView DataGridPacientes;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.TextBox txtFolioSelec;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button3;
     }
 }

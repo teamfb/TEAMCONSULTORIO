@@ -52,6 +52,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnLimpiar2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -87,7 +88,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(1126, 28);
+            this.BarraTitulo.Size = new System.Drawing.Size(1049, 28);
             this.BarraTitulo.TabIndex = 10;
             this.BarraTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseMove);
             // 
@@ -150,7 +151,7 @@
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(208, 20);
             this.txtContraseña.TabIndex = 18;
-            this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
+         
             // 
             // label9
             // 
@@ -177,7 +178,7 @@
             this.DataGridUsuarios.AllowUserToAddRows = false;
             this.DataGridUsuarios.AllowUserToDeleteRows = false;
             this.DataGridUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridUsuarios.Location = new System.Drawing.Point(71, 322);
+            this.DataGridUsuarios.Location = new System.Drawing.Point(21, 325);
             this.DataGridUsuarios.MultiSelect = false;
             this.DataGridUsuarios.Name = "DataGridUsuarios";
             this.DataGridUsuarios.ReadOnly = true;
@@ -190,7 +191,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(51, 209);
+            this.btnAgregar.Location = new System.Drawing.Point(51, 185);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(69, 24);
@@ -202,7 +203,7 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(138, 209);
+            this.btnEditar.Location = new System.Drawing.Point(138, 185);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(69, 24);
@@ -214,7 +215,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(223, 209);
+            this.btnEliminar.Location = new System.Drawing.Point(53, 226);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(69, 24);
@@ -242,12 +243,11 @@
             this.ComboTipo.Name = "ComboTipo";
             this.ComboTipo.Size = new System.Drawing.Size(109, 21);
             this.ComboTipo.TabIndex = 37;
-            this.ComboTipo.SelectedIndexChanged += new System.EventHandler(this.ComboTipo_SelectedIndexChanged);
             // 
             // btnEliminar2
             // 
             this.btnEliminar2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar2.Location = new System.Drawing.Point(896, 242);
+            this.btnEliminar2.Location = new System.Drawing.Point(876, 226);
             this.btnEliminar2.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar2.Name = "btnEliminar2";
             this.btnEliminar2.Size = new System.Drawing.Size(69, 24);
@@ -259,7 +259,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(983, 185);
+            this.button2.Location = new System.Drawing.Point(963, 185);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(69, 24);
@@ -271,7 +271,7 @@
             // btnAgregar2
             // 
             this.btnAgregar2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar2.Location = new System.Drawing.Point(896, 185);
+            this.btnAgregar2.Location = new System.Drawing.Point(876, 185);
             this.btnAgregar2.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar2.Name = "btnAgregar2";
             this.btnAgregar2.Size = new System.Drawing.Size(69, 24);
@@ -283,7 +283,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(983, 242);
+            this.button4.Location = new System.Drawing.Point(963, 226);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(69, 24);
@@ -295,7 +295,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(896, 284);
+            this.btnLimpiar.Location = new System.Drawing.Point(876, 284);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(156, 24);
@@ -307,7 +307,7 @@
             // btnLimpiar2
             // 
             this.btnLimpiar2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar2.Location = new System.Drawing.Point(51, 242);
+            this.btnLimpiar2.Location = new System.Drawing.Point(51, 284);
             this.btnLimpiar2.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar2.Name = "btnLimpiar2";
             this.btnLimpiar2.Size = new System.Drawing.Size(156, 24);
@@ -316,12 +316,25 @@
             this.btnLimpiar2.UseVisualStyleBackColor = true;
             this.btnLimpiar2.Click += new System.EventHandler(this.BtnLimpiar2_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(138, 226);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(69, 24);
+            this.button1.TabIndex = 64;
+            this.button1.Text = "Cerrar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1126, 551);
+            this.ClientSize = new System.Drawing.Size(1049, 551);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLimpiar2);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.button4);
@@ -349,7 +362,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Usuarios";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Usuarios_Load);
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridUsuarios)).EndInit();
@@ -384,5 +396,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnLimpiar2;
+        private System.Windows.Forms.Button button1;
     }
 }
