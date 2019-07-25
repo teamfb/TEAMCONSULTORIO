@@ -180,6 +180,7 @@
             this.RadioIncompleto = new System.Windows.Forms.RadioButton();
             this.RadioCompleto = new System.Windows.Forms.RadioButton();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
             this.btnAgreg = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.txtHepa = new System.Windows.Forms.TextBox();
@@ -212,6 +213,7 @@
             this.txtCardio = new System.Windows.Forms.TextBox();
             this.CheckCardio = new System.Windows.Forms.CheckBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.txtGenital = new System.Windows.Forms.TextBox();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
@@ -245,21 +247,21 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkCancerMama = new System.Windows.Forms.CheckBox();
+            this.checkCancerMatriz = new System.Windows.Forms.CheckBox();
+            this.checkLactancia = new System.Windows.Forms.CheckBox();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.label48 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label47 = new System.Windows.Forms.Label();
             this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -278,21 +280,21 @@
             this.label23 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkLocal = new System.Windows.Forms.CheckBox();
+            this.checkDiu = new System.Windows.Forms.CheckBox();
+            this.checkOral = new System.Windows.Forms.CheckBox();
+            this.checkBaja = new System.Windows.Forms.CheckBox();
+            this.checkQuirurgico = new System.Windows.Forms.CheckBox();
+            this.checkInyectable = new System.Windows.Forms.CheckBox();
+            this.checkHormonal = new System.Windows.Forms.CheckBox();
+            this.checkPlanFam = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label44 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label41 = new System.Windows.Forms.Label();
@@ -302,8 +304,6 @@
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.BarraTitulo.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1974,6 +1974,18 @@
             this.tabPage4.Text = "Ant. Patólogicos ";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(1077, 330);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(69, 24);
+            this.button5.TabIndex = 70;
+            this.button5.Text = "Cerrar";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
+            // 
             // btnAgreg
             // 
             this.btnAgreg.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2303,6 +2315,18 @@
             this.tabPage5.Text = "Ant. Aparatos y Sistemas";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(1024, 142);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(103, 24);
+            this.button4.TabIndex = 88;
+            this.button4.Text = "Limpiar campos";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
+            // 
             // groupBox20
             // 
             this.groupBox20.Controls.Add(this.txtGenital);
@@ -2598,21 +2622,21 @@
             // 
             this.tabPage7.BackColor = System.Drawing.Color.White;
             this.tabPage7.Controls.Add(this.groupBox6);
-            this.tabPage7.Controls.Add(this.checkBox11);
-            this.tabPage7.Controls.Add(this.checkBox10);
-            this.tabPage7.Controls.Add(this.checkBox9);
+            this.tabPage7.Controls.Add(this.checkCancerMama);
+            this.tabPage7.Controls.Add(this.checkCancerMatriz);
+            this.tabPage7.Controls.Add(this.checkLactancia);
             this.tabPage7.Controls.Add(this.dateTimePicker4);
             this.tabPage7.Controls.Add(this.label48);
-            this.tabPage7.Controls.Add(this.textBox15);
-            this.tabPage7.Controls.Add(this.label47);
             this.tabPage7.Controls.Add(this.textBox14);
+            this.tabPage7.Controls.Add(this.label47);
+            this.tabPage7.Controls.Add(this.textBox13);
             this.tabPage7.Controls.Add(this.label46);
             this.tabPage7.Controls.Add(this.label45);
-            this.tabPage7.Controls.Add(this.textBox13);
+            this.tabPage7.Controls.Add(this.textBox12);
             this.tabPage7.Controls.Add(this.label40);
             this.tabPage7.Controls.Add(this.label39);
-            this.tabPage7.Controls.Add(this.textBox10);
             this.tabPage7.Controls.Add(this.textBox9);
+            this.tabPage7.Controls.Add(this.textBox7);
             this.tabPage7.Controls.Add(this.textBox8);
             this.tabPage7.Controls.Add(this.label38);
             this.tabPage7.Controls.Add(this.textBox6);
@@ -2659,7 +2683,7 @@
             // 
             this.checkBox12.AutoSize = true;
             this.checkBox12.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox12.Location = new System.Drawing.Point(21, 74);
+            this.checkBox12.Location = new System.Drawing.Point(17, 29);
             this.checkBox12.Name = "checkBox12";
             this.checkBox12.Size = new System.Drawing.Size(108, 20);
             this.checkBox12.TabIndex = 104;
@@ -2670,45 +2694,45 @@
             // 
             this.checkBox13.AutoSize = true;
             this.checkBox13.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox13.Location = new System.Drawing.Point(21, 28);
+            this.checkBox13.Location = new System.Drawing.Point(17, 55);
             this.checkBox13.Name = "checkBox13";
             this.checkBox13.Size = new System.Drawing.Size(104, 20);
             this.checkBox13.TabIndex = 103;
             this.checkBox13.Text = "Cancer Matriz";
             this.checkBox13.UseVisualStyleBackColor = false;
             // 
-            // checkBox11
+            // checkCancerMama
             // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox11.Location = new System.Drawing.Point(886, 388);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(108, 20);
-            this.checkBox11.TabIndex = 102;
-            this.checkBox11.Text = "Cancer Mama";
-            this.checkBox11.UseVisualStyleBackColor = false;
+            this.checkCancerMama.AutoSize = true;
+            this.checkCancerMama.BackColor = System.Drawing.Color.Transparent;
+            this.checkCancerMama.Location = new System.Drawing.Point(886, 388);
+            this.checkCancerMama.Name = "checkCancerMama";
+            this.checkCancerMama.Size = new System.Drawing.Size(108, 20);
+            this.checkCancerMama.TabIndex = 102;
+            this.checkCancerMama.Text = "Cancer Mama";
+            this.checkCancerMama.UseVisualStyleBackColor = false;
             // 
-            // checkBox10
+            // checkCancerMatriz
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox10.Location = new System.Drawing.Point(886, 342);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(104, 20);
-            this.checkBox10.TabIndex = 101;
-            this.checkBox10.Text = "Cancer Matriz";
-            this.checkBox10.UseVisualStyleBackColor = false;
+            this.checkCancerMatriz.AutoSize = true;
+            this.checkCancerMatriz.BackColor = System.Drawing.Color.Transparent;
+            this.checkCancerMatriz.Location = new System.Drawing.Point(886, 342);
+            this.checkCancerMatriz.Name = "checkCancerMatriz";
+            this.checkCancerMatriz.Size = new System.Drawing.Size(104, 20);
+            this.checkCancerMatriz.TabIndex = 101;
+            this.checkCancerMatriz.Text = "Cancer Matriz";
+            this.checkCancerMatriz.UseVisualStyleBackColor = false;
             // 
-            // checkBox9
+            // checkLactancia
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox9.Location = new System.Drawing.Point(887, 244);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(148, 20);
-            this.checkBox9.TabIndex = 15;
-            this.checkBox9.Text = "Proporcionó lactancia";
-            this.checkBox9.UseVisualStyleBackColor = false;
+            this.checkLactancia.AutoSize = true;
+            this.checkLactancia.BackColor = System.Drawing.Color.Transparent;
+            this.checkLactancia.Location = new System.Drawing.Point(887, 244);
+            this.checkLactancia.Name = "checkLactancia";
+            this.checkLactancia.Size = new System.Drawing.Size(148, 20);
+            this.checkLactancia.TabIndex = 15;
+            this.checkLactancia.Text = "Proporcionó lactancia";
+            this.checkLactancia.UseVisualStyleBackColor = false;
             // 
             // dateTimePicker4
             // 
@@ -2726,12 +2750,12 @@
             this.label48.TabIndex = 99;
             this.label48.Text = "Último parto";
             // 
-            // textBox15
+            // textBox14
             // 
-            this.textBox15.Location = new System.Drawing.Point(1005, 152);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(59, 21);
-            this.textBox15.TabIndex = 98;
+            this.textBox14.Location = new System.Drawing.Point(1005, 152);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(59, 21);
+            this.textBox14.TabIndex = 98;
             // 
             // label47
             // 
@@ -2742,12 +2766,12 @@
             this.label47.TabIndex = 97;
             this.label47.Text = "Número de parejas sexuales";
             // 
-            // textBox14
+            // textBox13
             // 
-            this.textBox14.Location = new System.Drawing.Point(1005, 122);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(59, 21);
-            this.textBox14.TabIndex = 96;
+            this.textBox13.Location = new System.Drawing.Point(1005, 122);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(59, 21);
+            this.textBox13.TabIndex = 96;
             // 
             // label46
             // 
@@ -2767,14 +2791,14 @@
             this.label45.TabIndex = 94;
             this.label45.Text = "Observaciones";
             // 
-            // textBox13
+            // textBox12
             // 
-            this.textBox13.Location = new System.Drawing.Point(19, 527);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox13.Size = new System.Drawing.Size(768, 96);
-            this.textBox13.TabIndex = 94;
+            this.textBox12.Location = new System.Drawing.Point(19, 527);
+            this.textBox12.Multiline = true;
+            this.textBox12.Name = "textBox12";
+            this.textBox12.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox12.Size = new System.Drawing.Size(774, 96);
+            this.textBox12.TabIndex = 94;
             // 
             // label40
             // 
@@ -2794,23 +2818,23 @@
             this.label39.TabIndex = 89;
             this.label39.Text = "Menopausia";
             // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(721, 11);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(59, 21);
-            this.textBox10.TabIndex = 88;
-            // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(721, 45);
+            this.textBox9.Location = new System.Drawing.Point(721, 43);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(59, 21);
-            this.textBox9.TabIndex = 87;
+            this.textBox9.TabIndex = 88;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(411, 45);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(59, 21);
+            this.textBox7.TabIndex = 87;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(541, 45);
+            this.textBox8.Location = new System.Drawing.Point(538, 45);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(59, 21);
             this.textBox8.TabIndex = 86;
@@ -2818,7 +2842,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(487, 48);
+            this.label38.Location = new System.Drawing.Point(488, 44);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(48, 16);
             this.label38.TabIndex = 85;
@@ -2826,7 +2850,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(541, 13);
+            this.textBox6.Location = new System.Drawing.Point(256, 45);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(59, 21);
             this.textBox6.TabIndex = 84;
@@ -2834,7 +2858,7 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(507, 18);
+            this.label37.Location = new System.Drawing.Point(507, 21);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(28, 16);
             this.label37.TabIndex = 83;
@@ -2842,7 +2866,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(412, 43);
+            this.textBox5.Location = new System.Drawing.Point(81, 45);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(59, 21);
             this.textBox5.TabIndex = 82;
@@ -2850,7 +2874,7 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(354, 48);
+            this.label36.Location = new System.Drawing.Point(347, 48);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(58, 16);
             this.label36.TabIndex = 81;
@@ -2858,23 +2882,23 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(256, 41);
+            this.textBox4.Location = new System.Drawing.Point(721, 16);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(59, 21);
             this.textBox4.TabIndex = 80;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(256, 16);
+            this.textBox3.Location = new System.Drawing.Point(538, 18);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(59, 21);
             this.textBox3.TabIndex = 79;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(388, 18);
+            this.dateTimePicker1.Location = new System.Drawing.Point(388, 15);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(83, 21);
+            this.dateTimePicker1.Size = new System.Drawing.Size(82, 21);
             this.dateTimePicker1.TabIndex = 15;
             // 
             // label35
@@ -2889,7 +2913,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(212, 43);
+            this.label34.Location = new System.Drawing.Point(209, 46);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(41, 16);
             this.label34.TabIndex = 77;
@@ -2898,7 +2922,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(212, 18);
+            this.label33.Location = new System.Drawing.Point(212, 21);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(38, 16);
             this.label33.TabIndex = 76;
@@ -2906,7 +2930,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(81, 43);
+            this.textBox2.Location = new System.Drawing.Point(256, 18);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(59, 21);
             this.textBox2.TabIndex = 75;
@@ -2947,113 +2971,113 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.checkBox8);
-            this.groupBox5.Controls.Add(this.checkBox7);
-            this.groupBox5.Controls.Add(this.checkBox6);
-            this.groupBox5.Controls.Add(this.checkBox5);
-            this.groupBox5.Controls.Add(this.checkBox4);
-            this.groupBox5.Controls.Add(this.checkBox3);
-            this.groupBox5.Controls.Add(this.checkBox2);
-            this.groupBox5.Controls.Add(this.checkBox1);
+            this.groupBox5.Controls.Add(this.checkLocal);
+            this.groupBox5.Controls.Add(this.checkDiu);
+            this.groupBox5.Controls.Add(this.checkOral);
+            this.groupBox5.Controls.Add(this.checkBaja);
+            this.groupBox5.Controls.Add(this.checkQuirurgico);
+            this.groupBox5.Controls.Add(this.checkInyectable);
+            this.groupBox5.Controls.Add(this.checkHormonal);
+            this.groupBox5.Controls.Add(this.checkPlanFam);
             this.groupBox5.Location = new System.Drawing.Point(19, 401);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(774, 85);
             this.groupBox5.TabIndex = 72;
             this.groupBox5.TabStop = false;
             // 
-            // checkBox8
+            // checkLocal
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox8.Location = new System.Drawing.Point(600, 38);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(56, 20);
-            this.checkBox8.TabIndex = 14;
-            this.checkBox8.Text = "Local";
-            this.checkBox8.UseVisualStyleBackColor = false;
+            this.checkLocal.AutoSize = true;
+            this.checkLocal.BackColor = System.Drawing.Color.Transparent;
+            this.checkLocal.Location = new System.Drawing.Point(600, 38);
+            this.checkLocal.Name = "checkLocal";
+            this.checkLocal.Size = new System.Drawing.Size(56, 20);
+            this.checkLocal.TabIndex = 14;
+            this.checkLocal.Text = "Local";
+            this.checkLocal.UseVisualStyleBackColor = false;
             // 
-            // checkBox7
+            // checkDiu
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox7.Location = new System.Drawing.Point(534, 38);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(44, 20);
-            this.checkBox7.TabIndex = 13;
-            this.checkBox7.Text = "Diu";
-            this.checkBox7.UseVisualStyleBackColor = false;
+            this.checkDiu.AutoSize = true;
+            this.checkDiu.BackColor = System.Drawing.Color.Transparent;
+            this.checkDiu.Location = new System.Drawing.Point(534, 38);
+            this.checkDiu.Name = "checkDiu";
+            this.checkDiu.Size = new System.Drawing.Size(44, 20);
+            this.checkDiu.TabIndex = 13;
+            this.checkDiu.Text = "Diu";
+            this.checkDiu.UseVisualStyleBackColor = false;
             // 
-            // checkBox6
+            // checkOral
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox6.Location = new System.Drawing.Point(467, 38);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(50, 20);
-            this.checkBox6.TabIndex = 12;
-            this.checkBox6.Text = "Oral";
-            this.checkBox6.UseVisualStyleBackColor = false;
+            this.checkOral.AutoSize = true;
+            this.checkOral.BackColor = System.Drawing.Color.Transparent;
+            this.checkOral.Location = new System.Drawing.Point(467, 38);
+            this.checkOral.Name = "checkOral";
+            this.checkOral.Size = new System.Drawing.Size(50, 20);
+            this.checkOral.TabIndex = 12;
+            this.checkOral.Text = "Oral";
+            this.checkOral.UseVisualStyleBackColor = false;
             // 
-            // checkBox5
+            // checkBaja
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox5.Location = new System.Drawing.Point(400, 38);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(51, 20);
-            this.checkBox5.TabIndex = 11;
-            this.checkBox5.Text = "Baja";
-            this.checkBox5.UseVisualStyleBackColor = false;
+            this.checkBaja.AutoSize = true;
+            this.checkBaja.BackColor = System.Drawing.Color.Transparent;
+            this.checkBaja.Location = new System.Drawing.Point(400, 38);
+            this.checkBaja.Name = "checkBaja";
+            this.checkBaja.Size = new System.Drawing.Size(51, 20);
+            this.checkBaja.TabIndex = 11;
+            this.checkBaja.Text = "Baja";
+            this.checkBaja.UseVisualStyleBackColor = false;
             // 
-            // checkBox4
+            // checkQuirurgico
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox4.Location = new System.Drawing.Point(293, 38);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(82, 20);
-            this.checkBox4.TabIndex = 10;
-            this.checkBox4.Text = "Quirúrgico";
-            this.checkBox4.UseVisualStyleBackColor = false;
+            this.checkQuirurgico.AutoSize = true;
+            this.checkQuirurgico.BackColor = System.Drawing.Color.Transparent;
+            this.checkQuirurgico.Location = new System.Drawing.Point(293, 38);
+            this.checkQuirurgico.Name = "checkQuirurgico";
+            this.checkQuirurgico.Size = new System.Drawing.Size(82, 20);
+            this.checkQuirurgico.TabIndex = 10;
+            this.checkQuirurgico.Text = "Quirúrgico";
+            this.checkQuirurgico.UseVisualStyleBackColor = false;
             // 
-            // checkBox3
+            // checkInyectable
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox3.Location = new System.Drawing.Point(188, 38);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(86, 20);
-            this.checkBox3.TabIndex = 9;
-            this.checkBox3.Text = "Inyectable";
-            this.checkBox3.UseVisualStyleBackColor = false;
+            this.checkInyectable.AutoSize = true;
+            this.checkInyectable.BackColor = System.Drawing.Color.Transparent;
+            this.checkInyectable.Location = new System.Drawing.Point(188, 38);
+            this.checkInyectable.Name = "checkInyectable";
+            this.checkInyectable.Size = new System.Drawing.Size(86, 20);
+            this.checkInyectable.TabIndex = 9;
+            this.checkInyectable.Text = "Inyectable";
+            this.checkInyectable.UseVisualStyleBackColor = false;
             // 
-            // checkBox2
+            // checkHormonal
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox2.Location = new System.Drawing.Point(94, 38);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(79, 20);
-            this.checkBox2.TabIndex = 8;
-            this.checkBox2.Text = "Hormonal";
-            this.checkBox2.UseVisualStyleBackColor = false;
+            this.checkHormonal.AutoSize = true;
+            this.checkHormonal.BackColor = System.Drawing.Color.Transparent;
+            this.checkHormonal.Location = new System.Drawing.Point(94, 38);
+            this.checkHormonal.Name = "checkHormonal";
+            this.checkHormonal.Size = new System.Drawing.Size(79, 20);
+            this.checkHormonal.TabIndex = 8;
+            this.checkHormonal.Text = "Hormonal";
+            this.checkHormonal.UseVisualStyleBackColor = false;
             // 
-            // checkBox1
+            // checkPlanFam
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.Location = new System.Drawing.Point(6, 0);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(139, 20);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Planificación Familiar";
-            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkPlanFam.AutoSize = true;
+            this.checkPlanFam.BackColor = System.Drawing.Color.Transparent;
+            this.checkPlanFam.Location = new System.Drawing.Point(6, 0);
+            this.checkPlanFam.Name = "checkPlanFam";
+            this.checkPlanFam.Size = new System.Drawing.Size(139, 20);
+            this.checkPlanFam.TabIndex = 7;
+            this.checkPlanFam.Text = "Planificación Familiar";
+            this.checkPlanFam.UseVisualStyleBackColor = false;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.dateTimePicker3);
             this.groupBox4.Controls.Add(this.label44);
-            this.groupBox4.Controls.Add(this.textBox12);
+            this.groupBox4.Controls.Add(this.textBox11);
             this.groupBox4.Controls.Add(this.label43);
             this.groupBox4.Location = new System.Drawing.Point(19, 244);
             this.groupBox4.Name = "groupBox4";
@@ -3077,14 +3101,14 @@
             this.label44.TabIndex = 93;
             this.label44.Text = "Fecha cítología vaginal";
             // 
-            // textBox12
+            // textBox11
             // 
-            this.textBox12.Location = new System.Drawing.Point(266, 36);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox12.Size = new System.Drawing.Size(495, 96);
-            this.textBox12.TabIndex = 93;
+            this.textBox11.Location = new System.Drawing.Point(266, 36);
+            this.textBox11.Multiline = true;
+            this.textBox11.Name = "textBox11";
+            this.textBox11.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox11.Size = new System.Drawing.Size(495, 96);
+            this.textBox11.TabIndex = 93;
             // 
             // label43
             // 
@@ -3097,7 +3121,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox11);
+            this.groupBox3.Controls.Add(this.textBox10);
             this.groupBox3.Controls.Add(this.label42);
             this.groupBox3.Controls.Add(this.dateTimePicker2);
             this.groupBox3.Controls.Add(this.label41);
@@ -3107,14 +3131,14 @@
             this.groupBox3.TabIndex = 70;
             this.groupBox3.TabStop = false;
             // 
-            // textBox11
+            // textBox10
             // 
-            this.textBox11.Location = new System.Drawing.Point(266, 37);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox11.Size = new System.Drawing.Size(495, 96);
-            this.textBox11.TabIndex = 92;
+            this.textBox10.Location = new System.Drawing.Point(266, 37);
+            this.textBox10.Multiline = true;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox10.Size = new System.Drawing.Size(495, 96);
+            this.textBox10.TabIndex = 92;
             // 
             // label42
             // 
@@ -3151,17 +3175,19 @@
             this.button23.TabIndex = 67;
             this.button23.Text = "Agregar";
             this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.Button23_Click);
             // 
             // button24
             // 
             this.button24.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button24.Location = new System.Drawing.Point(968, 21);
+            this.button24.Location = new System.Drawing.Point(947, 21);
             this.button24.Margin = new System.Windows.Forms.Padding(2);
             this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(69, 24);
+            this.button24.Size = new System.Drawing.Size(105, 24);
             this.button24.TabIndex = 68;
-            this.button24.Text = "Editar";
+            this.button24.Text = "Limpiar campos";
             this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.Button24_Click);
             // 
             // button25
             // 
@@ -3171,8 +3197,9 @@
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(69, 24);
             this.button25.TabIndex = 69;
-            this.button25.Text = "Eliminar";
+            this.button25.Text = "Cerrar";
             this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.Button25_Click);
             // 
             // contextMenuStrip1
             // 
@@ -3183,30 +3210,6 @@
             // 
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(1024, 142);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(103, 24);
-            this.button4.TabIndex = 88;
-            this.button4.Text = "Limpiar campos";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.Button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(1077, 330);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(69, 24);
-            this.button5.TabIndex = 70;
-            this.button5.Text = "Cerrar";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // Pacientes
             // 
@@ -3477,21 +3480,21 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.CheckBox checkBox12;
         private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.CheckBox checkCancerMama;
+        private System.Windows.Forms.CheckBox checkCancerMatriz;
+        private System.Windows.Forms.CheckBox checkLactancia;
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.Label label47;
         private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.TextBox textBox6;
@@ -3510,21 +3513,21 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkLocal;
+        private System.Windows.Forms.CheckBox checkDiu;
+        private System.Windows.Forms.CheckBox checkOral;
+        private System.Windows.Forms.CheckBox checkBaja;
+        private System.Windows.Forms.CheckBox checkQuirurgico;
+        private System.Windows.Forms.CheckBox checkInyectable;
+        private System.Windows.Forms.CheckBox checkHormonal;
+        private System.Windows.Forms.CheckBox checkPlanFam;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label41;
