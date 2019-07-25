@@ -151,7 +151,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btnAgrega = new System.Windows.Forms.Button();
-            this.btnEdita = new System.Windows.Forms.Button();
+            this.btnLimpiar3 = new System.Windows.Forms.Button();
             this.btnElimina = new System.Windows.Forms.Button();
             this.txtAle = new System.Windows.Forms.TextBox();
             this.txtTran = new System.Windows.Forms.TextBox();
@@ -213,29 +213,28 @@
             this.CheckCardio = new System.Windows.Forms.CheckBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.txtGenital = new System.Windows.Forms.TextBox();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.txtMusculoEsque = new System.Windows.Forms.TextBox();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.txtPielMucosas = new System.Windows.Forms.TextBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.txtPsiquico = new System.Windows.Forms.TextBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.txtUrinario = new System.Windows.Forms.TextBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.txtEndocrino = new System.Windows.Forms.TextBox();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.txtNervioso = new System.Windows.Forms.TextBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.txtLinfSang = new System.Windows.Forms.TextBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txtCircularorio = new System.Windows.Forms.TextBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.txtSintomas = new System.Windows.Forms.TextBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txtPadeAct = new System.Windows.Forms.TextBox();
             this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.label60 = new System.Windows.Forms.Label();
@@ -303,6 +302,8 @@
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.BarraTitulo.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -889,6 +890,7 @@
             this.button7.TabIndex = 66;
             this.button7.Text = "Cerrar";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.Button7_Click);
             // 
             // button3
             // 
@@ -900,6 +902,7 @@
             this.button3.TabIndex = 65;
             this.button3.Text = "Limpiar Campos";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // btnAgregar2
             // 
@@ -1601,7 +1604,7 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.btnAgrega);
-            this.tabPage3.Controls.Add(this.btnEdita);
+            this.tabPage3.Controls.Add(this.btnLimpiar3);
             this.tabPage3.Controls.Add(this.btnElimina);
             this.tabPage3.Controls.Add(this.txtAle);
             this.tabPage3.Controls.Add(this.txtTran);
@@ -1638,16 +1641,17 @@
             this.btnAgrega.Text = "Agregar";
             this.btnAgrega.UseVisualStyleBackColor = true;
             // 
-            // btnEdita
+            // btnLimpiar3
             // 
-            this.btnEdita.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdita.Location = new System.Drawing.Point(1122, 318);
-            this.btnEdita.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEdita.Name = "btnEdita";
-            this.btnEdita.Size = new System.Drawing.Size(69, 24);
-            this.btnEdita.TabIndex = 64;
-            this.btnEdita.Text = "Editar";
-            this.btnEdita.UseVisualStyleBackColor = true;
+            this.btnLimpiar3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar3.Location = new System.Drawing.Point(1076, 317);
+            this.btnLimpiar3.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLimpiar3.Name = "btnLimpiar3";
+            this.btnLimpiar3.Size = new System.Drawing.Size(115, 24);
+            this.btnLimpiar3.TabIndex = 64;
+            this.btnLimpiar3.Text = "Limpiar campos";
+            this.btnLimpiar3.UseVisualStyleBackColor = true;
+            this.btnLimpiar3.Click += new System.EventHandler(this.BtnLimpiar3_Click);
             // 
             // btnElimina
             // 
@@ -1657,8 +1661,9 @@
             this.btnElimina.Name = "btnElimina";
             this.btnElimina.Size = new System.Drawing.Size(69, 24);
             this.btnElimina.TabIndex = 65;
-            this.btnElimina.Text = "Eliminar";
+            this.btnElimina.Text = "Cerrar";
             this.btnElimina.UseVisualStyleBackColor = true;
+            this.btnElimina.Click += new System.EventHandler(this.BtnElimina_Click);
             // 
             // txtAle
             // 
@@ -1936,6 +1941,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.button5);
             this.tabPage4.Controls.Add(this.btnAgreg);
             this.tabPage4.Controls.Add(this.btnEdit);
             this.tabPage4.Controls.Add(this.txtHepa);
@@ -1971,7 +1977,7 @@
             // btnAgreg
             // 
             this.btnAgreg.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgreg.Location = new System.Drawing.Point(1077, 238);
+            this.btnAgreg.Location = new System.Drawing.Point(1077, 243);
             this.btnAgreg.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgreg.Name = "btnAgreg";
             this.btnAgreg.Size = new System.Drawing.Size(69, 24);
@@ -2275,6 +2281,7 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.button4);
             this.tabPage5.Controls.Add(this.groupBox20);
             this.tabPage5.Controls.Add(this.groupBox19);
             this.tabPage5.Controls.Add(this.groupBox18);
@@ -2287,7 +2294,6 @@
             this.tabPage5.Controls.Add(this.groupBox11);
             this.tabPage5.Controls.Add(this.groupBox10);
             this.tabPage5.Controls.Add(this.button15);
-            this.tabPage5.Controls.Add(this.button16);
             this.tabPage5.Controls.Add(this.button17);
             this.tabPage5.Location = new System.Drawing.Point(4, 24);
             this.tabPage5.Name = "tabPage5";
@@ -2299,7 +2305,7 @@
             // 
             // groupBox20
             // 
-            this.groupBox20.Controls.Add(this.textBox26);
+            this.groupBox20.Controls.Add(this.txtGenital);
             this.groupBox20.Location = new System.Drawing.Point(992, 426);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.Size = new System.Drawing.Size(288, 127);
@@ -2307,18 +2313,18 @@
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "GENITAL";
             // 
-            // textBox26
+            // txtGenital
             // 
-            this.textBox26.Location = new System.Drawing.Point(18, 31);
-            this.textBox26.Multiline = true;
-            this.textBox26.Name = "textBox26";
-            this.textBox26.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox26.Size = new System.Drawing.Size(254, 76);
-            this.textBox26.TabIndex = 70;
+            this.txtGenital.Location = new System.Drawing.Point(18, 31);
+            this.txtGenital.Multiline = true;
+            this.txtGenital.Name = "txtGenital";
+            this.txtGenital.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtGenital.Size = new System.Drawing.Size(254, 76);
+            this.txtGenital.TabIndex = 70;
             // 
             // groupBox19
             // 
-            this.groupBox19.Controls.Add(this.textBox25);
+            this.groupBox19.Controls.Add(this.txtMusculoEsque);
             this.groupBox19.Location = new System.Drawing.Point(515, 559);
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.Size = new System.Drawing.Size(463, 127);
@@ -2326,18 +2332,18 @@
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "MÚSCULO ESQUELÉTICO";
             // 
-            // textBox25
+            // txtMusculoEsque
             // 
-            this.textBox25.Location = new System.Drawing.Point(18, 31);
-            this.textBox25.Multiline = true;
-            this.textBox25.Name = "textBox25";
-            this.textBox25.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox25.Size = new System.Drawing.Size(400, 76);
-            this.textBox25.TabIndex = 70;
+            this.txtMusculoEsque.Location = new System.Drawing.Point(18, 31);
+            this.txtMusculoEsque.Multiline = true;
+            this.txtMusculoEsque.Name = "txtMusculoEsque";
+            this.txtMusculoEsque.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtMusculoEsque.Size = new System.Drawing.Size(400, 76);
+            this.txtMusculoEsque.TabIndex = 70;
             // 
             // groupBox18
             // 
-            this.groupBox18.Controls.Add(this.textBox24);
+            this.groupBox18.Controls.Add(this.txtPielMucosas);
             this.groupBox18.Location = new System.Drawing.Point(515, 426);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Size = new System.Drawing.Size(463, 127);
@@ -2345,18 +2351,19 @@
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "PIEL Y MUCOSAS";
             // 
-            // textBox24
+            // txtPielMucosas
             // 
-            this.textBox24.Location = new System.Drawing.Point(18, 31);
-            this.textBox24.Multiline = true;
-            this.textBox24.Name = "textBox24";
-            this.textBox24.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox24.Size = new System.Drawing.Size(400, 76);
-            this.textBox24.TabIndex = 70;
+            this.txtPielMucosas.Location = new System.Drawing.Point(18, 31);
+            this.txtPielMucosas.Multiline = true;
+            this.txtPielMucosas.Name = "txtPielMucosas";
+            this.txtPielMucosas.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtPielMucosas.Size = new System.Drawing.Size(400, 76);
+            this.txtPielMucosas.TabIndex = 70;
+            this.txtPielMucosas.Tag = "";
             // 
             // groupBox17
             // 
-            this.groupBox17.Controls.Add(this.textBox23);
+            this.groupBox17.Controls.Add(this.txtPsiquico);
             this.groupBox17.Location = new System.Drawing.Point(515, 293);
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.Size = new System.Drawing.Size(463, 127);
@@ -2364,18 +2371,18 @@
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "PSIQUICO";
             // 
-            // textBox23
+            // txtPsiquico
             // 
-            this.textBox23.Location = new System.Drawing.Point(18, 31);
-            this.textBox23.Multiline = true;
-            this.textBox23.Name = "textBox23";
-            this.textBox23.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox23.Size = new System.Drawing.Size(400, 76);
-            this.textBox23.TabIndex = 70;
+            this.txtPsiquico.Location = new System.Drawing.Point(18, 31);
+            this.txtPsiquico.Multiline = true;
+            this.txtPsiquico.Name = "txtPsiquico";
+            this.txtPsiquico.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtPsiquico.Size = new System.Drawing.Size(400, 76);
+            this.txtPsiquico.TabIndex = 70;
             // 
             // groupBox16
             // 
-            this.groupBox16.Controls.Add(this.textBox22);
+            this.groupBox16.Controls.Add(this.txtUrinario);
             this.groupBox16.Location = new System.Drawing.Point(515, 160);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Size = new System.Drawing.Size(463, 127);
@@ -2383,18 +2390,18 @@
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "URINARIO";
             // 
-            // textBox22
+            // txtUrinario
             // 
-            this.textBox22.Location = new System.Drawing.Point(18, 31);
-            this.textBox22.Multiline = true;
-            this.textBox22.Name = "textBox22";
-            this.textBox22.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox22.Size = new System.Drawing.Size(400, 76);
-            this.textBox22.TabIndex = 70;
+            this.txtUrinario.Location = new System.Drawing.Point(18, 31);
+            this.txtUrinario.Multiline = true;
+            this.txtUrinario.Name = "txtUrinario";
+            this.txtUrinario.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtUrinario.Size = new System.Drawing.Size(400, 76);
+            this.txtUrinario.TabIndex = 70;
             // 
             // groupBox15
             // 
-            this.groupBox15.Controls.Add(this.textBox21);
+            this.groupBox15.Controls.Add(this.txtEndocrino);
             this.groupBox15.Location = new System.Drawing.Point(515, 27);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Size = new System.Drawing.Size(463, 127);
@@ -2402,18 +2409,18 @@
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "ENDOCRINO";
             // 
-            // textBox21
+            // txtEndocrino
             // 
-            this.textBox21.Location = new System.Drawing.Point(18, 31);
-            this.textBox21.Multiline = true;
-            this.textBox21.Name = "textBox21";
-            this.textBox21.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox21.Size = new System.Drawing.Size(400, 76);
-            this.textBox21.TabIndex = 70;
+            this.txtEndocrino.Location = new System.Drawing.Point(18, 31);
+            this.txtEndocrino.Multiline = true;
+            this.txtEndocrino.Name = "txtEndocrino";
+            this.txtEndocrino.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtEndocrino.Size = new System.Drawing.Size(400, 76);
+            this.txtEndocrino.TabIndex = 70;
             // 
             // groupBox14
             // 
-            this.groupBox14.Controls.Add(this.textBox20);
+            this.groupBox14.Controls.Add(this.txtNervioso);
             this.groupBox14.Location = new System.Drawing.Point(29, 559);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(463, 127);
@@ -2421,18 +2428,18 @@
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "NERVIOSO";
             // 
-            // textBox20
+            // txtNervioso
             // 
-            this.textBox20.Location = new System.Drawing.Point(18, 31);
-            this.textBox20.Multiline = true;
-            this.textBox20.Name = "textBox20";
-            this.textBox20.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox20.Size = new System.Drawing.Size(400, 76);
-            this.textBox20.TabIndex = 70;
+            this.txtNervioso.Location = new System.Drawing.Point(18, 31);
+            this.txtNervioso.Multiline = true;
+            this.txtNervioso.Name = "txtNervioso";
+            this.txtNervioso.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtNervioso.Size = new System.Drawing.Size(400, 76);
+            this.txtNervioso.TabIndex = 70;
             // 
             // groupBox13
             // 
-            this.groupBox13.Controls.Add(this.textBox19);
+            this.groupBox13.Controls.Add(this.txtLinfSang);
             this.groupBox13.Location = new System.Drawing.Point(29, 426);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(463, 127);
@@ -2440,18 +2447,19 @@
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "LINFÁTICO Y SANGUÍNEO";
             // 
-            // textBox19
+            // txtLinfSang
             // 
-            this.textBox19.Location = new System.Drawing.Point(18, 31);
-            this.textBox19.Multiline = true;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox19.Size = new System.Drawing.Size(400, 76);
-            this.textBox19.TabIndex = 70;
+            this.txtLinfSang.Location = new System.Drawing.Point(18, 31);
+            this.txtLinfSang.Multiline = true;
+            this.txtLinfSang.Name = "txtLinfSang";
+            this.txtLinfSang.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtLinfSang.Size = new System.Drawing.Size(400, 76);
+            this.txtLinfSang.TabIndex = 70;
+            this.txtLinfSang.Tag = "";
             // 
             // groupBox12
             // 
-            this.groupBox12.Controls.Add(this.textBox18);
+            this.groupBox12.Controls.Add(this.txtCircularorio);
             this.groupBox12.Location = new System.Drawing.Point(29, 293);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(463, 127);
@@ -2459,18 +2467,18 @@
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "CIRCULATORIO";
             // 
-            // textBox18
+            // txtCircularorio
             // 
-            this.textBox18.Location = new System.Drawing.Point(18, 31);
-            this.textBox18.Multiline = true;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox18.Size = new System.Drawing.Size(400, 76);
-            this.textBox18.TabIndex = 70;
+            this.txtCircularorio.Location = new System.Drawing.Point(18, 31);
+            this.txtCircularorio.Multiline = true;
+            this.txtCircularorio.Name = "txtCircularorio";
+            this.txtCircularorio.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtCircularorio.Size = new System.Drawing.Size(400, 76);
+            this.txtCircularorio.TabIndex = 70;
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.textBox17);
+            this.groupBox11.Controls.Add(this.txtSintomas);
             this.groupBox11.Location = new System.Drawing.Point(29, 160);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(463, 127);
@@ -2478,18 +2486,18 @@
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "SINTOMAS";
             // 
-            // textBox17
+            // txtSintomas
             // 
-            this.textBox17.Location = new System.Drawing.Point(18, 31);
-            this.textBox17.Multiline = true;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox17.Size = new System.Drawing.Size(400, 76);
-            this.textBox17.TabIndex = 70;
+            this.txtSintomas.Location = new System.Drawing.Point(18, 31);
+            this.txtSintomas.Multiline = true;
+            this.txtSintomas.Name = "txtSintomas";
+            this.txtSintomas.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtSintomas.Size = new System.Drawing.Size(400, 76);
+            this.txtSintomas.TabIndex = 70;
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.textBox16);
+            this.groupBox10.Controls.Add(this.txtPadeAct);
             this.groupBox10.Location = new System.Drawing.Point(29, 27);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(463, 127);
@@ -2497,47 +2505,38 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "PADECIMIENTO ACTÚAL";
             // 
-            // textBox16
+            // txtPadeAct
             // 
-            this.textBox16.Location = new System.Drawing.Point(18, 31);
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox16.Size = new System.Drawing.Size(400, 76);
-            this.textBox16.TabIndex = 70;
+            this.txtPadeAct.Location = new System.Drawing.Point(18, 31);
+            this.txtPadeAct.Multiline = true;
+            this.txtPadeAct.Name = "txtPadeAct";
+            this.txtPadeAct.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtPadeAct.Size = new System.Drawing.Size(400, 76);
+            this.txtPadeAct.TabIndex = 70;
             // 
             // button15
             // 
             this.button15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.Location = new System.Drawing.Point(1041, 98);
+            this.button15.Location = new System.Drawing.Point(1058, 101);
             this.button15.Margin = new System.Windows.Forms.Padding(2);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(69, 24);
             this.button15.TabIndex = 67;
             this.button15.Text = "Agregar";
             this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.Location = new System.Drawing.Point(1041, 148);
-            this.button16.Margin = new System.Windows.Forms.Padding(2);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(69, 24);
-            this.button16.TabIndex = 68;
-            this.button16.Text = "Editar";
-            this.button16.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.Button15_Click);
             // 
             // button17
             // 
             this.button17.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.Location = new System.Drawing.Point(1041, 194);
+            this.button17.Location = new System.Drawing.Point(1058, 180);
             this.button17.Margin = new System.Windows.Forms.Padding(2);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(69, 24);
             this.button17.TabIndex = 69;
-            this.button17.Text = "Eliminar";
+            this.button17.Text = "Cerrar";
             this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.Button17_Click);
             // 
             // tabPage6
             // 
@@ -3185,6 +3184,30 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(1024, 142);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(103, 24);
+            this.button4.TabIndex = 88;
+            this.button4.Text = "Limpiar campos";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(1077, 330);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(69, 24);
+            this.button5.TabIndex = 70;
+            this.button5.Text = "Cerrar";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
+            // 
             // Pacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3388,7 +3411,7 @@
         private System.Windows.Forms.GroupBox GroupHigiene;
         private System.Windows.Forms.GroupBox GroupEsquema;
         private System.Windows.Forms.Button btnAgrega;
-        private System.Windows.Forms.Button btnEdita;
+        private System.Windows.Forms.Button btnLimpiar3;
         private System.Windows.Forms.Button btnElimina;
         private System.Windows.Forms.TextBox txtAle;
         private System.Windows.Forms.TextBox txtTran;
@@ -3444,7 +3467,6 @@
         private System.Windows.Forms.TextBox txtHema;
         private System.Windows.Forms.CheckBox checkBox17;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
@@ -3509,27 +3531,27 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.GroupBox groupBox20;
-        private System.Windows.Forms.TextBox textBox26;
+        private System.Windows.Forms.TextBox txtGenital;
         private System.Windows.Forms.GroupBox groupBox19;
-        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.TextBox txtMusculoEsque;
         private System.Windows.Forms.GroupBox groupBox18;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox txtPielMucosas;
         private System.Windows.Forms.GroupBox groupBox17;
-        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox txtPsiquico;
         private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox txtUrinario;
         private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox txtEndocrino;
         private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox txtNervioso;
         private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox txtLinfSang;
         private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txtCircularorio;
         private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox txtSintomas;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txtPadeAct;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.TextBox txtFolio;
@@ -3540,5 +3562,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

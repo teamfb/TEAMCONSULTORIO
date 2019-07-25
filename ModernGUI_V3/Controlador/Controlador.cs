@@ -285,4 +285,23 @@ namespace ModernGUI_V3.Controlador
             return (bd.InsertarRegistro("ant_pato", _datos));
         }
     }
+
+    public class controladorAntAparatos : ControlBD
+    {
+        public controladorAntAparatos(ControlConfig _cfg)  // Constructor que asocia un archivo de configuración que ya
+        {                                            // fue leído. (Para no releer el config.ini innecesariamente)
+            bd = new BDMySQL(_cfg.cadconn);
+        }
+
+        public int sigNumeroAntAparatosCtl()
+        {
+            int sgte = Convert.ToInt32(bd.LeerNumerico("SELECT MAX(id_antecedente) FROM ant_aparatos;")) + 1;
+            return (sgte);
+        }
+
+        public bool agregarAntAparatosCtl(object[] _datos)
+        {
+            return (bd.InsertarRegistro("ant_aparatos", _datos));
+        }
+    }
 }
